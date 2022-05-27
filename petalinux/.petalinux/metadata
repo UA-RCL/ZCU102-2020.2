@@ -1,0 +1,6 @@
+PETALINUX_VER=2020.2
+VALIDATE_HW_CHKSUM=1
+HARDWARE_CHECKSUM=0e7ad968bd18ae265f3fa100abdc3313
+YOCTO_SDK=267ec34beec0964aff190e9bebb3cc43
+RFSCONFIG_CHKSUM=0d46a65924b9d3e8dd8018f263d80708
+HARDWARE_PATH=/host-fs/localhome/jmack2545/rcl/DASH-SoC/Hardware_Images/alex_f_debugging/fft2x_mmult2x_wrapper.xsa
