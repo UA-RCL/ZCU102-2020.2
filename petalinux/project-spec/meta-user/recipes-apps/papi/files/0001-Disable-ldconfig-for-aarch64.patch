@@ -1,0 +1,21 @@
+From c09b7485aca3ee0c66cfbb3694c8f4ff37ce4bfe Mon Sep 17 00:00:00 2001
+From: Joshua Mack <jmack2545@arizona.edu>
+Date: Fri, 28 Apr 2023 20:09:14 +0000
+Subject: [PATCH] Disable ldconfig for aarch64
+
+---
+ src/libpfm4/config.mk | 1 +
+ 1 file changed, 1 insertion(+)
+
+diff --git a/src/libpfm4/config.mk b/src/libpfm4/config.mk
+index daa982ee8..41fa091b3 100644
+--- a/src/libpfm4/config.mk
++++ b/src/libpfm4/config.mk
+@@ -163,6 +163,7 @@ endif
+ 
+ ifeq ($(ARCH),aarch64)
+ CONFIG_PFMLIB_ARCH_ARM64=y
++LDCONFIG=true
+ endif
+ 
+ ifeq ($(ARCH),arm64)

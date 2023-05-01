@@ -2841,10 +2841,10 @@ CONFIG_packagegroup-core-boot=y
 #
 # perf 
 #
-# CONFIG_perf is not set
+CONFIG_perf=y
 # CONFIG_perf-python is not set
-# CONFIG_perf-dbg is not set
-# CONFIG_perf-dev is not set
+CONFIG_perf-dbg=y
+CONFIG_perf-dev=y
 # CONFIG_perf-tests is not set
 
 #
@@ -4240,6 +4240,7 @@ CONFIG_imagefeature-debug-tweaks=y
 # apps 
 #
 # CONFIG_gpio-demo is not set
+CONFIG_papi=y
 # CONFIG_peekpoke is not set
 
 #
@@ -4260,4 +4261,4 @@ CONFIG_sshfs-fuse=y
 # PetaLinux RootFS Settings
 #
 CONFIG_ROOTFS_ROOT_PASSWD="root"
-CONFIG_ADD_EXTRA_USERS="petalinux:petalinux;"
+CONFIG_ADD_EXTRA_USERS=""
