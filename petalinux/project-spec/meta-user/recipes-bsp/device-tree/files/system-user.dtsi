@@ -41,7 +41,4 @@
 &mmult_1_dma {
   compatible = "generic-uio";
 };
-&scheduler_dma {
-  compatible = "generic-uio";
-};
 
