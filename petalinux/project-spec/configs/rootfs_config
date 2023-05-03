@@ -4256,6 +4256,7 @@ CONFIG_u-dma-buf=y
 # network 
 #
 CONFIG_sshfs-fuse=y
+CONFIG_gsl=y
 
 #
 # PetaLinux RootFS Settings
