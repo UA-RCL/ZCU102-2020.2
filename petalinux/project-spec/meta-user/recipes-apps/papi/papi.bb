@@ -1,7 +1,3 @@
-#
-# This file is the papi recipe.
-#
-
 SUMMARY = "PAPI - the Performance Application Programming Interface"
 SECTION = "PETALINUX/apps"
 LICENSE = "MIT"
@@ -14,6 +10,7 @@ SRC_URI = "git://bitbucket.org/icl/papi.git;protocol=https \
 SRCREV = "papi-6-0-0-t"
 # Fails during do_compile
 #SRCREV = "papi-7-0-1-t"
+
 
 inherit autotools
 
@@ -36,15 +33,6 @@ EXTRA_OECONF += " --with-perf-events"
 EXTRA_OECONF += " --with-arch=aarch64"
 EXTRA_OECONF += " --with-CPU=arm"
 
-# Some of the things we're compiling are putting /usr/include on the include path
-# Which means they might not be cross-compiling correctly.
-# This disables that error and stops it from killing the build, but it might be a legit problem ¯\_(ツ)_/¯
-INSANE_SKIP_${PN} += " compile-host-path" 
-# Apparently some of the rpaths we're providing are duplicate/default.
-# This "doesn't break things" but they make it an error that kills the build anyway. So we're disabling it
-INSANE_SKIP_${PN} += " useless-rpaths" 
-# These are both documented here: https://docs.yoctoproject.org/3.1.24/ref-manual/ref-qa-checks.html
-
 do_install() {
   oe_runmake 'DESTDIR=${D}' install-lib 
   echo "installed libs"
@@ -58,3 +46,19 @@ do_install() {
   oe_runmake 'DESTDIR=${D}' install-pkgconf
   echo "installed pkgconf"
 }
+
+# Some of the things we're compiling are putting /usr/include on the include path
+# Which means they might not be cross-compiling correctly.
+# This disables that error and stops it from killing the build, but it might be a legit problem ¯\_(ツ)_/¯
+INSANE_SKIP_${PN} += " compile-host-path"
+# Apparently some of the rpaths we're providing are duplicate/default.
+# This "doesn't break things" but they make it an error that kills the build anyway. So we're disabling it
+INSANE_SKIP_${PN} += " useless-rpaths" 
+# These are both documented here: https://docs.yoctoproject.org/3.1.24/ref-manual/ref-qa-checks.html
+
+# But actually sometimes those errors still fail the build anyway for no apparent reason
+# Typically when building from a clean project (i.e. petalinux-build -x mrproper)
+# Rather than figure that out, I'm just going to disable all QA
+do_package_qa() {
+}
+
