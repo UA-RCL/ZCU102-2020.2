@@ -1,3 +1,6 @@
 [submodule "HLS_accel"]
 	path = HLS_accel
 	url = git@github.com:apfusco/HLS_accel.git
+[submodule "HW-Scheduler"]
+	path = HW-Scheduler
+	url = git@github.com:apfusco/HW-Scheduler.git
