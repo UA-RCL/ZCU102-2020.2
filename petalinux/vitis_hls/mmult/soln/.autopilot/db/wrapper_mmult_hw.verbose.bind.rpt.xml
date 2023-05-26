@@ -1,0 +1,52 @@
+<profile>
+
+<section name = "Vitis HLS Report for 'wrapper_mmult_hw'" level="0">
+<item name = "Date">Fri Jun  3 13:36:49 2022
+</item>
+<item name = "Version">2020.2 (Build 3064766 on Wed Nov 18 09:12:47 MST 2020)</item>
+<item name = "Project">mmult</item>
+<item name = "Solution">soln (Vivado IP Flow Target)</item>
+<item name = "Product family">zynquplus</item>
+<item name = "Target device">xczu9eg-ffvb1156-2-e</item>
+</section>
+
+<section name = "Performance Estimates" level="0">
+<item name = "Timing">
+<section name = "" level="1">
+<item name = "Summary"><table name="" hasTotal="0">
+<keys size="4">Clock, Target, Estimated, Uncertainty</keys>
+<column name="ap_clk">3.33 ns, 2.416 ns, 0.90 ns</column>
+</table>
+</item>
+</section>
+</item>
+<item name = "Latency">
+<section name = "" level="1">
+<item name = "Summary"><table name="" hasTotal="0">
+<keys size="8">, min, max, min, max, min, max, Type</keys>
+<column name="">3914, 3914, 13.045 us, 13.045 us, 3914, 3914, none</column>
+</table>
+</item>
+<item name = "Detail">
+<section name = "" level="1">
+<item name = "Instance"><table name="" hasTotal="0">
+<keys size="9">Instance, Module, min, max, min, max, min, max, Type</keys>
+</table>
+</item>
+<item name = "Loop"><table name="" hasTotal="0">
+<keys size="8">Loop Name, min, max, Latency, achieved, target, Count, Pipelined</keys>
+<column name="- VITIS_LOOP_26_1_VITIS_LOOP_28_2">256, 256, 2, 1, 1, 256, yes</column>
+<column name="- VITIS_LOOP_35_3_VITIS_LOOP_37_4">256, 256, 2, 1, 1, 256, yes</column>
+<column name="- VITIS_LOOP_45_5_VITIS_LOOP_47_6">256, 256, 2, 1, 1, 256, yes</column>
+<column name="- VITIS_LOOP_55_7_VITIS_LOOP_57_8">256, 256, 2, 1, 1, 256, yes</column>
+<column name="- lreorder1_lreorder2">2844, 2844, 40, 11, 1, 256, yes</column>
+<column name="- VITIS_LOOP_69_9_VITIS_LOOP_71_10">16, 16, 2, 1, 1, 16, yes</column>
+<column name="- VITIS_LOOP_82_11_VITIS_LOOP_84_12">16, 16, 2, 1, 1, 16, yes</column>
+</table>
+</item>
+</section>
+</item>
+</section>
+</item>
+</section>
+</profile>

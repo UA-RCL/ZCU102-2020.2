@@ -1,0 +1,25 @@
+<AutoPilot:solution xmlns:AutoPilot="com.autoesl.autopilot.solution">
+    <name>
+        <value string="soln"/>
+    </name>
+    <project>
+        <value string="mmult"/>
+    </project>
+    <flowTarget value="vivado"/>
+    <targetInfo>
+        <TargetInfo value="xczu9eg:-ffvb1156:-2-e"/>
+    </targetInfo>
+    <libraryList>
+        <library value="xilinx/zynquplus/zynquplus" name="DefaultPlatform"/>
+    </libraryList>
+    <clockList>
+        <clock name="default" period="3.333" default="false"/>
+    </clockList>
+    <config>
+        <config_export description="A complex matrix multiply accelerator for 4x64 * 64x4 operations" display_name="mmult_2020" format="ip_catalog" ipname="mmult_2020" library="UA-RCL-Lib" output="./mmult_export" vendor="UA-RCL"/>
+    </config>
+    <ExportDesign askAgain="true" evaluate="false" rtl="verilog" formatName="ip_catalog">
+        <Format formatName="ip_catalog" description="A complex matrix multiply accelerator for 4x64 * 64x4 operations" vendor="UA-RCL" library="UA-RCL-Lib" ipname="mmult_2020" version="" display_name="mmult_2020" taxonomy=""/>
+    </ExportDesign>
+</AutoPilot:solution>
+
