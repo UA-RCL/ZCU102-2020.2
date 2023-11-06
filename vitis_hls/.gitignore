@@ -1,6 +1,0 @@
-# ignore generated project directory
-mmult
-# along with IP export directory
-export
-# and our logging dotfile
-.vitis_hls.log
