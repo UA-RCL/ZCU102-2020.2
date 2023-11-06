@@ -1,3 +1,7 @@
+# Ignore HLS build folders
+mmult
+Conv2D
+ZIP
 # Ignore IP export directory
 IPs
 # and our logging dotfile

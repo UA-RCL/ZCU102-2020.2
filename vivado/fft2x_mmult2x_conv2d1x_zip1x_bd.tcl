@@ -1,6 +1,6 @@
 
 ################################################################
-# This is a generated script based on design: fft2x_mmult2x
+# This is a generated script based on design: fft2x_mmult2x_conv2d1x_zip1x
 #
 # Though there are limitations about the generated script,
 # the main purpose of this utility is to make learning
@@ -35,7 +35,7 @@ if { [string first $scripts_vivado_version $current_vivado_version] == -1 } {
 ################################################################
 
 # To test this script, run the following commands from Vivado Tcl console:
-# source fft2x_mmult2x_script.tcl
+# source fft2x_mmult2x_conv2d1x_zip1x_script.tcl
 
 # If there is no project opened, this script will create a
 # project, but make sure you do not have an existing project
@@ -50,7 +50,7 @@ if { $list_projs eq "" } {
 
 # CHANGE DESIGN NAME HERE
 variable design_name
-set design_name fft2x_mmult2x
+set design_name fft2x_mmult2x_conv2d1x_zip1x
 
 # If you do not already have an existing IP Integrator design open,
 # you can create a design using the following command:
@@ -2140,9 +2140,6 @@ proc create_root_design { parentCell } {
 ##################################################################
 # MAIN FLOW
 ##################################################################
-
-
-common::send_gid_msg -ssname BD::TCL -id 2052 -severity "CRITICAL WARNING" "This Tcl script was generated from a block design that is out-of-date/locked. It is possible that design <$design_name> may result in errors during construction."
 
 create_root_design ""
 
