@@ -1,0 +1,157 @@
+
+
+================================================================
+== Vitis HLS Report for 'ZIP_HLS_accel'
+================================================================
+* Date:           Thu Sep  7 16:47:37 2023
+
+* Version:        2020.2 (Build 3064766 on Wed Nov 18 09:12:47 MST 2020)
+* Project:        ZIP_prj
+* Solution:       zip (Vivado IP Flow Target)
+* Product family: zynquplus
+* Target device:  xczu9eg-ffvb1156-2-e
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing: 
+    * Summary: 
+    +--------+---------+----------+------------+
+    |  Clock |  Target | Estimated| Uncertainty|
+    +--------+---------+----------+------------+
+    |ap_clk  |  3.33 ns|  2.606 ns|     0.90 ns|
+    +--------+---------+----------+------------+
+
++ Latency: 
+    * Summary: 
+    +---------+---------+-----------+-----------+-----+-------+---------+
+    |  Latency (cycles) |   Latency (absolute)  |   Interval  | Pipeline|
+    |   min   |   max   |    min    |    max    | min |  max  |   Type  |
+    +---------+---------+-----------+-----------+-----+-------+---------+
+    |        5|    16445|  16.665 ns|  54.811 us|    6|  16446|     none|
+    +---------+---------+-----------+-----------+-----+-------+---------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        N/A
+
+============================================================
++ Verbose Summary: Synthesis Manager
+============================================================
+InlineROM: 1
+ExposeGlobal: 0
+============================================================
++ Verbose Summary: CDFG Model
+============================================================
+IsTopModel: 1
+ResetActiveHigh: 1
+IsCombinational: 0
+IsDatapathOnly: 0
+HasWiredReturn: 1
+HasMFsm: 0
+HasVarLatency: 1
+IsPipeline: 0
+IsRtlPipelined: 0
+IsInstanceOverlapped: 0
+IsDontTouch: 0
+HasImplIP: 0
+IsGatedGlobalClock: 0
+
+
+============================================================
++ Verbose Summary: Schedule
+============================================================
+* Number of FSM states : 4
+* Pipeline : 0
+* Dataflow Pipeline: 0
+
+* FSM state transitions: 
+1 --> 2 
+2 --> 3 
+3 --> 4 
+4 --> 
+
+* FSM state operations: 
+
+State 1 <SV = 0> <Delay = 0.00>
+
+State 2 <SV = 1> <Delay = 2.23>
+ST_2 : Operation 5 [1/1] (1.00ns)   --->   "%op_read = read i32 @_ssdm_op_Read.s_axilite.i32, i32 %op"   --->   Operation 5 'read' 'op_read' <Predicate = true> <Delay = 1.00> <CoreInst = "s_axilite">   --->   Core 122 's_axilite' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write'>
+ST_2 : Operation 6 [1/1] (1.00ns)   --->   "%size_read = read i32 @_ssdm_op_Read.s_axilite.i32, i32 %size"   --->   Operation 6 'read' 'size_read' <Predicate = true> <Delay = 1.00> <CoreInst = "s_axilite">   --->   Core 122 's_axilite' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write'>
+ST_2 : Operation 7 [1/1] (0.00ns)   --->   "%empty = trunc i32 %size_read"   --->   Operation 7 'trunc' 'empty' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 8 [2/2] (1.23ns)   --->   "%call_ln75 = call void @wrapper_zip_hw, i32 %INPUT_STREAM_V_data_V, i4 %INPUT_STREAM_V_keep_V, i4 %INPUT_STREAM_V_strb_V, i1 %INPUT_STREAM_V_user_V, i1 %INPUT_STREAM_V_last_V, i1 %INPUT_STREAM_V_id_V, i1 %INPUT_STREAM_V_dest_V, i32 %OUTPUT_STREAM_V_data_V, i4 %OUTPUT_STREAM_V_keep_V, i4 %OUTPUT_STREAM_V_strb_V, i1 %OUTPUT_STREAM_V_user_V, i1 %OUTPUT_STREAM_V_last_V, i1 %OUTPUT_STREAM_V_id_V, i1 %OUTPUT_STREAM_V_dest_V, i31 %empty, i32 %op_read" [zip_axiwrapper.cpp:75]   --->   Operation 8 'call' 'call_ln75' <Predicate = true> <Delay = 1.23> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 3 <SV = 2> <Delay = 1.23>
+ST_3 : Operation 9 [1/2] (1.23ns)   --->   "%call_ln75 = call void @wrapper_zip_hw, i32 %INPUT_STREAM_V_data_V, i4 %INPUT_STREAM_V_keep_V, i4 %INPUT_STREAM_V_strb_V, i1 %INPUT_STREAM_V_user_V, i1 %INPUT_STREAM_V_last_V, i1 %INPUT_STREAM_V_id_V, i1 %INPUT_STREAM_V_dest_V, i32 %OUTPUT_STREAM_V_data_V, i4 %OUTPUT_STREAM_V_keep_V, i4 %OUTPUT_STREAM_V_strb_V, i1 %OUTPUT_STREAM_V_user_V, i1 %OUTPUT_STREAM_V_last_V, i1 %OUTPUT_STREAM_V_id_V, i1 %OUTPUT_STREAM_V_dest_V, i31 %empty, i32 %op_read" [zip_axiwrapper.cpp:75]   --->   Operation 9 'call' 'call_ln75' <Predicate = true> <Delay = 1.23> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 4 <SV = 3> <Delay = 0.00>
+ST_4 : Operation 10 [1/1] (0.00ns)   --->   "%spectopmodule_ln0 = spectopmodule void @_ssdm_op_SpecTopModule, void @empty_2"   --->   Operation 10 'spectopmodule' 'spectopmodule_ln0' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 11 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i32 %INPUT_STREAM_V_data_V, i4 %INPUT_STREAM_V_keep_V, i4 %INPUT_STREAM_V_strb_V, i1 %INPUT_STREAM_V_user_V, i1 %INPUT_STREAM_V_last_V, i1 %INPUT_STREAM_V_id_V, i1 %INPUT_STREAM_V_dest_V, void @empty_7, i32 1, i32 1, void @empty_5, i32 0, i32 0, void @empty_14, void @empty_14, void @empty_14, i32 0, i32 0, i32 0, i32 0, void @empty_14, void @empty_14"   --->   Operation 11 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 12 [1/1] (0.00ns)   --->   "%specbitsmap_ln0 = specbitsmap void @_ssdm_op_SpecBitsMap, i32 %INPUT_STREAM_V_data_V"   --->   Operation 12 'specbitsmap' 'specbitsmap_ln0' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 13 [1/1] (0.00ns)   --->   "%specbitsmap_ln0 = specbitsmap void @_ssdm_op_SpecBitsMap, i4 %INPUT_STREAM_V_keep_V"   --->   Operation 13 'specbitsmap' 'specbitsmap_ln0' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 14 [1/1] (0.00ns)   --->   "%specbitsmap_ln0 = specbitsmap void @_ssdm_op_SpecBitsMap, i4 %INPUT_STREAM_V_strb_V"   --->   Operation 14 'specbitsmap' 'specbitsmap_ln0' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 15 [1/1] (0.00ns)   --->   "%specbitsmap_ln0 = specbitsmap void @_ssdm_op_SpecBitsMap, i1 %INPUT_STREAM_V_user_V"   --->   Operation 15 'specbitsmap' 'specbitsmap_ln0' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 16 [1/1] (0.00ns)   --->   "%specbitsmap_ln0 = specbitsmap void @_ssdm_op_SpecBitsMap, i1 %INPUT_STREAM_V_last_V"   --->   Operation 16 'specbitsmap' 'specbitsmap_ln0' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 17 [1/1] (0.00ns)   --->   "%specbitsmap_ln0 = specbitsmap void @_ssdm_op_SpecBitsMap, i1 %INPUT_STREAM_V_id_V"   --->   Operation 17 'specbitsmap' 'specbitsmap_ln0' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 18 [1/1] (0.00ns)   --->   "%specbitsmap_ln0 = specbitsmap void @_ssdm_op_SpecBitsMap, i1 %INPUT_STREAM_V_dest_V"   --->   Operation 18 'specbitsmap' 'specbitsmap_ln0' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 19 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i32 %OUTPUT_STREAM_V_data_V, i4 %OUTPUT_STREAM_V_keep_V, i4 %OUTPUT_STREAM_V_strb_V, i1 %OUTPUT_STREAM_V_user_V, i1 %OUTPUT_STREAM_V_last_V, i1 %OUTPUT_STREAM_V_id_V, i1 %OUTPUT_STREAM_V_dest_V, void @empty_7, i32 1, i32 1, void @empty_5, i32 0, i32 0, void @empty_14, void @empty_14, void @empty_14, i32 0, i32 0, i32 0, i32 0, void @empty_14, void @empty_14"   --->   Operation 19 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 20 [1/1] (0.00ns)   --->   "%specbitsmap_ln0 = specbitsmap void @_ssdm_op_SpecBitsMap, i32 %OUTPUT_STREAM_V_data_V"   --->   Operation 20 'specbitsmap' 'specbitsmap_ln0' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 21 [1/1] (0.00ns)   --->   "%specbitsmap_ln0 = specbitsmap void @_ssdm_op_SpecBitsMap, i4 %OUTPUT_STREAM_V_keep_V"   --->   Operation 21 'specbitsmap' 'specbitsmap_ln0' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 22 [1/1] (0.00ns)   --->   "%specbitsmap_ln0 = specbitsmap void @_ssdm_op_SpecBitsMap, i4 %OUTPUT_STREAM_V_strb_V"   --->   Operation 22 'specbitsmap' 'specbitsmap_ln0' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 23 [1/1] (0.00ns)   --->   "%specbitsmap_ln0 = specbitsmap void @_ssdm_op_SpecBitsMap, i1 %OUTPUT_STREAM_V_user_V"   --->   Operation 23 'specbitsmap' 'specbitsmap_ln0' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 24 [1/1] (0.00ns)   --->   "%specbitsmap_ln0 = specbitsmap void @_ssdm_op_SpecBitsMap, i1 %OUTPUT_STREAM_V_last_V"   --->   Operation 24 'specbitsmap' 'specbitsmap_ln0' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 25 [1/1] (0.00ns)   --->   "%specbitsmap_ln0 = specbitsmap void @_ssdm_op_SpecBitsMap, i1 %OUTPUT_STREAM_V_id_V"   --->   Operation 25 'specbitsmap' 'specbitsmap_ln0' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 26 [1/1] (0.00ns)   --->   "%specbitsmap_ln0 = specbitsmap void @_ssdm_op_SpecBitsMap, i1 %OUTPUT_STREAM_V_dest_V"   --->   Operation 26 'specbitsmap' 'specbitsmap_ln0' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 27 [1/1] (0.00ns)   --->   "%specbitsmap_ln0 = specbitsmap void @_ssdm_op_SpecBitsMap, i32 %size"   --->   Operation 27 'specbitsmap' 'specbitsmap_ln0' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 28 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i32 %size, void @empty_11, i32 0, i32 0, void @empty_14, i32 0, i32 0, void @empty, void @empty_0, void @empty_14, i32 0, i32 0, i32 0, i32 0, void @empty_14, void @empty_14"   --->   Operation 28 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 29 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i32 %size, void @empty_1, i32 0, i32 0, void @empty_14, i32 0, i32 0, void @empty_14, void @empty_14, void @empty_14, i32 0, i32 0, i32 0, i32 0, void @empty_14, void @empty_14"   --->   Operation 29 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 30 [1/1] (0.00ns)   --->   "%specbitsmap_ln0 = specbitsmap void @_ssdm_op_SpecBitsMap, i32 %op"   --->   Operation 30 'specbitsmap' 'specbitsmap_ln0' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 31 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i32 %op, void @empty_11, i32 0, i32 0, void @empty_14, i32 0, i32 0, void @empty, void @empty_13, void @empty_14, i32 0, i32 0, i32 0, i32 0, void @empty_14, void @empty_14"   --->   Operation 31 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 32 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i32 %op, void @empty_1, i32 0, i32 0, void @empty_14, i32 0, i32 0, void @empty_14, void @empty_14, void @empty_14, i32 0, i32 0, i32 0, i32 0, void @empty_14, void @empty_14"   --->   Operation 32 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 33 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i32 0, void @empty_11, i32 0, i32 0, void @empty_14, i32 0, i32 0, void @empty, void @empty_14, void @empty_14, i32 0, i32 0, i32 0, i32 0, void @empty_14, void @empty_14"   --->   Operation 33 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 34 [1/1] (0.00ns)   --->   "%ret_ln77 = ret" [zip_axiwrapper.cpp:77]   --->   Operation 34 'ret' 'ret_ln77' <Predicate = true> <Delay = 0.00>
+
+
+============================================================
++ Verbose Summary: Timing violations
+============================================================
+Target clock period: 3.33ns, clock uncertainty: 0.9ns.
+
+ <State 1>: 0ns
+The critical path consists of the following:
+
+ <State 2>: 2.24ns
+The critical path consists of the following:
+	s_axi read on port 'op' [17]  (1 ns)
+	'call' operation ('call_ln75', zip_axiwrapper.cpp:75) to 'wrapper_zip_hw' [44]  (1.24 ns)
+
+ <State 3>: 1.24ns
+The critical path consists of the following:
+	'call' operation ('call_ln75', zip_axiwrapper.cpp:75) to 'wrapper_zip_hw' [44]  (1.24 ns)
+
+ <State 4>: 0ns
+The critical path consists of the following:
+
+
+============================================================
++ Verbose Summary: Binding
+============================================================
+N/A
+* FSMD analyzer results:
+  - Output states:
+ - Input state : 
+  - Chain level:
+	State 1
+	State 2
+	State 3
+	State 4
+
+
+============================================================
++ Verbose Summary: Datapath Resource usage 
+============================================================
+N/A

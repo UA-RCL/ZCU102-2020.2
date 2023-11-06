@@ -1,0 +1,50 @@
+<profile>
+
+<section name = "Vitis HLS Report for 'Filter2DKernel'" level="0">
+<item name = "Date">Thu Sep  7 16:46:10 2023
+</item>
+<item name = "Version">2020.2 (Build 3064766 on Wed Nov 18 09:12:47 MST 2020)</item>
+<item name = "Project">conv_filter_prj</item>
+<item name = "Solution">solution (Vivado IP Flow Target)</item>
+<item name = "Product family">zynquplus</item>
+<item name = "Target device">xczu9eg-ffvb1156-2-e</item>
+</section>
+
+<section name = "Performance Estimates" level="0">
+<item name = "Timing">
+<section name = "" level="1">
+<item name = "Summary"><table name="" hasTotal="0">
+<keys size="4">Clock, Target, Estimated, Uncertainty</keys>
+<column name="ap_clk">3.33 ns, 3.239 ns, 1.00 ns</column>
+</table>
+</item>
+</section>
+</item>
+<item name = "Latency">
+<section name = "" level="1">
+<item name = "Summary"><table name="" hasTotal="0">
+<keys size="8">, min, max, min, max, min, max, Type</keys>
+<column name="">144, 2083213, 0.480 us, 6.943 ms, 136, 2083212, dataflow</column>
+</table>
+</item>
+<item name = "Detail">
+<section name = "" level="1">
+<item name = "Instance"><table name="" hasTotal="0">
+<keys size="9">Instance, Module, min, max, min, max, min, max, Type</keys>
+<column name="grp_Filter2D_fu_176">Filter2D, 135, 2073751, 0.450 us, 6.912 ms, 135, 2073751, none</column>
+<column name="grp_Window2D_fu_193">Window2D, 6, 2083211, 19.998 ns, 6.943 ms, 6, 2083211, none</column>
+<column name="grp_ReadFromMem_fu_202">ReadFromMem, 131, 131, 0.437 us, 0.437 us, 131, 131, none</column>
+<column name="call_ln210_Filter2DKernel_entry4_fu_209">Filter2DKernel_entry4, 0, 0, 0 ns, 0 ns, 0, 0, none</column>
+<column name="call_ln212_Filter2DKernel_entry3_fu_221">Filter2DKernel_entry3, 0, 0, 0 ns, 0 ns, 0, 0, none</column>
+</table>
+</item>
+<item name = "Loop"><table name="" hasTotal="0">
+<keys size="8">Loop Name, min, max, Latency, achieved, target, Count, Pipelined</keys>
+</table>
+</item>
+</section>
+</item>
+</section>
+</item>
+</section>
+</profile>

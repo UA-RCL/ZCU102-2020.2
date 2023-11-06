@@ -1,0 +1,145 @@
+==============================================================
+Vitis HLS - High-Level Synthesis from C, C++ and OpenCL v2020.2 (64-bit)
+Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
+==============================================================
+INFO: [HLS 200-1505] Using default flow_target 'vivado'
+INFO: [HLS 200-1510] Running: set_part xczu9eg-ffvb1156-2-e 
+INFO: [HLS 200-10] Setting target device to 'xczu9eg-ffvb1156-2-e'
+INFO: [HLS 200-1510] Running: create_clock -period 3.333 -name default 
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 3.333ns.
+INFO: [HLS 200-1510] Running: csynth_design 
+INFO: [HLS 200-111] Finished File checks and directory preparation: CPU user time: 0.01 seconds. CPU system time: 0 seconds. Elapsed time: 0 seconds; current allocated memory: 205.742 MB.
+INFO: [HLS 200-10] Analyzing design file 'zip_axiwrapper.cpp' ... 
+INFO: [HLS 200-10] Analyzing design file 'zip.cpp' ... 
+INFO: [HLS 200-111] Finished Source Code Analysis and Preprocessing: CPU user time: 1.28 seconds. CPU system time: 0.29 seconds. Elapsed time: 1.63 seconds; current allocated memory: 207.413 MB.
+INFO: [HLS 200-777] Using interface defaults for 'Vivado' flow target.
+INFO: [HLS 214-131] Inlining function 'hls::axis<float, 1ul, 1ul, 1ul>::get_user_ptr()' into 'hls::stream<hls::axis<float, 1ul, 1ul, 1ul>, 0>::read()' (/opt/CoE/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_axi_sdata.h:293:50)
+INFO: [HLS 214-131] Inlining function 'hls::axis<float, 1ul, 1ul, 1ul>::get_dest_ptr()' into 'hls::stream<hls::axis<float, 1ul, 1ul, 1ul>, 0>::read()' (/opt/CoE/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_axi_sdata.h:296:25)
+INFO: [HLS 214-131] Inlining function 'hls::axis<float, 1ul, 1ul, 1ul>::get_id_ptr()' into 'hls::stream<hls::axis<float, 1ul, 1ul, 1ul>, 0>::read()' (/opt/CoE/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_axi_sdata.h:295:67)
+INFO: [HLS 214-131] Inlining function 'hls::axis<float, 1ul, 1ul, 1ul>::get_user_ptr()' into 'hls::stream<hls::axis<float, 1ul, 1ul, 1ul>, 0>::read()' (/opt/CoE/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_axi_sdata.h:295:36)
+INFO: [HLS 214-131] Inlining function 'hls::axis<float, 1ul, 1ul, 1ul>::get_dest_ptr()' into 'hls::stream<hls::axis<float, 1ul, 1ul, 1ul>, 0>::read()' (/opt/CoE/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_axi_sdata.h:294:39)
+INFO: [HLS 214-131] Inlining function 'hls::axis<float, 1ul, 1ul, 1ul>::get_id_ptr()' into 'hls::stream<hls::axis<float, 1ul, 1ul, 1ul>, 0>::read()' (/opt/CoE/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_axi_sdata.h:294:23)
+INFO: [HLS 214-131] Inlining function 'hls::axis<float, 1ul, 1ul, 1ul>::get_user_ptr()' into 'hls::stream<hls::axis<float, 1ul, 1ul, 1ul>, 0>::write(hls::axis<float, 1ul, 1ul, 1ul> const&)' (/opt/CoE/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_axi_sdata.h:304:51)
+INFO: [HLS 214-131] Inlining function 'hls::axis<float, 1ul, 1ul, 1ul>::get_dest_ptr()' into 'hls::stream<hls::axis<float, 1ul, 1ul, 1ul>, 0>::write(hls::axis<float, 1ul, 1ul, 1ul> const&)' (/opt/CoE/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_axi_sdata.h:307:26)
+INFO: [HLS 214-131] Inlining function 'hls::axis<float, 1ul, 1ul, 1ul>::get_id_ptr()' into 'hls::stream<hls::axis<float, 1ul, 1ul, 1ul>, 0>::write(hls::axis<float, 1ul, 1ul, 1ul> const&)' (/opt/CoE/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_axi_sdata.h:306:68)
+INFO: [HLS 214-131] Inlining function 'hls::axis<float, 1ul, 1ul, 1ul>::get_user_ptr()' into 'hls::stream<hls::axis<float, 1ul, 1ul, 1ul>, 0>::write(hls::axis<float, 1ul, 1ul, 1ul> const&)' (/opt/CoE/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_axi_sdata.h:306:37)
+INFO: [HLS 214-131] Inlining function 'hls::axis<float, 1ul, 1ul, 1ul>::get_dest_ptr()' into 'hls::stream<hls::axis<float, 1ul, 1ul, 1ul>, 0>::write(hls::axis<float, 1ul, 1ul, 1ul> const&)' (/opt/CoE/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_axi_sdata.h:305:40)
+INFO: [HLS 214-131] Inlining function 'hls::axis<float, 1ul, 1ul, 1ul>::get_id_ptr()' into 'hls::stream<hls::axis<float, 1ul, 1ul, 1ul>, 0>::write(hls::axis<float, 1ul, 1ul, 1ul> const&)' (/opt/CoE/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_axi_sdata.h:305:24)
+INFO: [HLS 214-131] Inlining function 'hls::stream<hls::axis<float, 1ul, 1ul, 1ul>, 0>::read()' into 'wrapper_zip_hw(hls::stream<hls::axis<float, 1ul, 1ul, 1ul>, 0>&, hls::stream<hls::axis<float, 1ul, 1ul, 1ul>, 0>&, int, int)' (zip_axiwrapper.cpp:25:16)
+INFO: [HLS 214-131] Inlining function 'hls::stream<hls::axis<float, 1ul, 1ul, 1ul>, 0>::write(hls::axis<float, 1ul, 1ul, 1ul> const&)' into 'wrapper_zip_hw(hls::stream<hls::axis<float, 1ul, 1ul, 1ul>, 0>&, hls::stream<hls::axis<float, 1ul, 1ul, 1ul>, 0>&, int, int)' (zip_axiwrapper.cpp:63:20)
+INFO: [HLS 214-131] Inlining function 'hls::stream<hls::axis<float, 1ul, 1ul, 1ul>, 0>::read()' into 'wrapper_zip_hw(hls::stream<hls::axis<float, 1ul, 1ul, 1ul>, 0>&, hls::stream<hls::axis<float, 1ul, 1ul, 1ul>, 0>&, int, int)' (zip_axiwrapper.cpp:32:16)
+INFO: [HLS 214-178] Inlining function 'zip_add_top(float*, float*, float*, int)' into 'wrapper_zip_hw(hls::stream<hls::axis<float, 1ul, 1ul, 1ul>, 0>&, hls::stream<hls::axis<float, 1ul, 1ul, 1ul>, 0>&, int, int)' (zip_axiwrapper.cpp:15:0)
+INFO: [HLS 214-178] Inlining function 'zip_sub_top(float*, float*, float*, int)' into 'wrapper_zip_hw(hls::stream<hls::axis<float, 1ul, 1ul, 1ul>, 0>&, hls::stream<hls::axis<float, 1ul, 1ul, 1ul>, 0>&, int, int)' (zip_axiwrapper.cpp:15:0)
+INFO: [HLS 214-178] Inlining function 'zip_mult_top(float*, float*, float*, int)' into 'wrapper_zip_hw(hls::stream<hls::axis<float, 1ul, 1ul, 1ul>, 0>&, hls::stream<hls::axis<float, 1ul, 1ul, 1ul>, 0>&, int, int)' (zip_axiwrapper.cpp:15:0)
+INFO: [HLS 214-178] Inlining function 'zip_div_top(float*, float*, float*, int)' into 'wrapper_zip_hw(hls::stream<hls::axis<float, 1ul, 1ul, 1ul>, 0>&, hls::stream<hls::axis<float, 1ul, 1ul, 1ul>, 0>&, int, int)' (zip_axiwrapper.cpp:15:0)
+INFO: [HLS 200-111] Finished Compiling Optimization and Transform: CPU user time: 1.62 seconds. CPU system time: 0.25 seconds. Elapsed time: 1.9 seconds; current allocated memory: 209.418 MB.
+INFO: [HLS 200-111] Finished Checking Pragmas: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0 seconds; current allocated memory: 209.420 MB.
+INFO: [HLS 200-10] Starting code transformations ...
+INFO: [HLS 200-111] Finished Standard Transforms: CPU user time: 0.03 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.04 seconds; current allocated memory: 218.567 MB.
+INFO: [HLS 200-10] Checking synthesizability ...
+INFO: [HLS 200-111] Finished Checking Synthesizability: CPU user time: 0.08 seconds. CPU system time: 0 seconds. Elapsed time: 0.09 seconds; current allocated memory: 231.090 MB.
+INFO: [XFORM 203-510] Pipelining loop 'zip_add_l' (zip.cpp:21) in function 'wrapper_zip_hw' automatically.
+INFO: [XFORM 203-510] Pipelining loop 'zip_sub_l' (zip.cpp:35) in function 'wrapper_zip_hw' automatically.
+INFO: [XFORM 203-510] Pipelining loop 'zip_mult_l' (zip.cpp:64) in function 'wrapper_zip_hw' automatically.
+INFO: [XFORM 203-510] Pipelining loop 'zip_div_l' (zip.cpp:49) in function 'wrapper_zip_hw' automatically.
+INFO: [XFORM 203-510] Pipelining loop 'zip_add_l' (zip.cpp:21) in function 'wrapper_zip_hw' automatically.
+INFO: [HLS 200-111] Finished Loop, function and other optimizations: CPU user time: 0.22 seconds. CPU system time: 0 seconds. Elapsed time: 0.22 seconds; current allocated memory: 265.852 MB.
+INFO: [HLS 200-472] Inferring partial write operation for 'A' (zip_axiwrapper.cpp:26:14)
+INFO: [HLS 200-472] Inferring partial write operation for 'B' (zip_axiwrapper.cpp:33:14)
+INFO: [HLS 200-472] Inferring partial write operation for 'C' (zip.cpp:23:7)
+INFO: [HLS 200-472] Inferring partial write operation for 'C' (zip.cpp:37:7)
+INFO: [HLS 200-472] Inferring partial write operation for 'C' (zip.cpp:66:7)
+INFO: [HLS 200-472] Inferring partial write operation for 'C' (zip.cpp:67:16)
+INFO: [HLS 200-472] Inferring partial write operation for 'C' (zip.cpp:51:8)
+INFO: [HLS 200-472] Inferring partial write operation for 'C' (zip.cpp:52:18)
+INFO: [HLS 200-111] Finished Architecture Synthesis: CPU user time: 0.12 seconds. CPU system time: 0 seconds. Elapsed time: 0.13 seconds; current allocated memory: 275.197 MB.
+INFO: [HLS 200-10] Starting hardware synthesis ...
+INFO: [HLS 200-10] Synthesizing 'ZIP_HLS_accel' ...
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'wrapper_zip_hw' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [HLS 200-1457] Automatically inferring 1WnR RAM type for array 'B'. Use bind_storage pragma to overwrite if needed.
+INFO: [HLS 200-1457] Automatically inferring 1WnR RAM type for array 'A'. Use bind_storage pragma to overwrite if needed.
+INFO: [SCHED 204-61] Pipelining loop 'VITIS_LOOP_22_1'.
+INFO: [HLS 200-1470] Pipelining result : Target II = 1, Final II = 1, Depth = 1, loop 'VITIS_LOOP_22_1'
+INFO: [SCHED 204-61] Pipelining loop 'VITIS_LOOP_29_2'.
+INFO: [HLS 200-1470] Pipelining result : Target II = 1, Final II = 1, Depth = 1, loop 'VITIS_LOOP_29_2'
+INFO: [SCHED 204-61] Pipelining loop 'zip_div_l'.
+INFO: [HLS 200-1470] Pipelining result : Target II = 1, Final II = 1, Depth = 51, loop 'zip_div_l'
+INFO: [SCHED 204-61] Pipelining loop 'zip_mult_l'.
+INFO: [HLS 200-1470] Pipelining result : Target II = 1, Final II = 1, Depth = 21, loop 'zip_mult_l'
+INFO: [SCHED 204-61] Pipelining loop 'zip_sub_l'.
+INFO: [HLS 200-1470] Pipelining result : Target II = 1, Final II = 1, Depth = 14, loop 'zip_sub_l'
+INFO: [SCHED 204-61] Pipelining loop 'zip_add_l'.
+INFO: [HLS 200-1470] Pipelining result : Target II = 1, Final II = 1, Depth = 14, loop 'zip_add_l'
+INFO: [SCHED 204-61] Pipelining loop 'zip_add_l'.
+INFO: [HLS 200-1470] Pipelining result : Target II = 1, Final II = 1, Depth = 14, loop 'zip_add_l'
+INFO: [SCHED 204-61] Pipelining loop 'VITIS_LOOP_56_3'.
+INFO: [HLS 200-1470] Pipelining result : Target II = 1, Final II = 1, Depth = 2, loop 'VITIS_LOOP_56_3'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.14 seconds. CPU system time: 0 seconds. Elapsed time: 0.14 seconds; current allocated memory: 276.244 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.25 seconds. CPU system time: 0 seconds. Elapsed time: 0.25 seconds; current allocated memory: 277.627 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'ZIP_HLS_accel' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.16 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.15 seconds; current allocated memory: 277.706 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.02 seconds. CPU system time: 0 seconds. Elapsed time: 0.02 seconds; current allocated memory: 277.857 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'wrapper_zip_hw' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-104] Estimated max fanout for 'wrapper_zip_hw' is 6192 from HDL expression: (1'b0 == ap_block_pp2_stage0_11001)
+INFO: [RTGEN 206-100] Generating core module 'fadd_32ns_32ns_32_11_full_dsp_1': 2 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'faddfsub_32ns_32ns_32_11_full_dsp_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'fdiv_32ns_32ns_32_30_no_dsp_1': 2 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'fmul_32ns_32ns_32_7_max_dsp_1': 6 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'wrapper_zip_hw'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.09 seconds. CPU system time: 0 seconds. Elapsed time: 0.08 seconds; current allocated memory: 280.954 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'ZIP_HLS_accel' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+WARNING: [RTGEN 206-101] Design contains AXI ports. Reset is fixed to synchronous and active low.
+INFO: [RTGEN 206-500] Setting interface mode on port 'ZIP_HLS_accel/INPUT_STREAM_V_data_V' to 'axis' (register, both mode).
+INFO: [RTGEN 206-500] Setting interface mode on port 'ZIP_HLS_accel/INPUT_STREAM_V_keep_V' to 'axis' (register, both mode).
+INFO: [RTGEN 206-500] Setting interface mode on port 'ZIP_HLS_accel/INPUT_STREAM_V_strb_V' to 'axis' (register, both mode).
+INFO: [RTGEN 206-500] Setting interface mode on port 'ZIP_HLS_accel/INPUT_STREAM_V_user_V' to 'axis' (register, both mode).
+INFO: [RTGEN 206-500] Setting interface mode on port 'ZIP_HLS_accel/INPUT_STREAM_V_last_V' to 'axis' (register, both mode).
+INFO: [RTGEN 206-500] Setting interface mode on port 'ZIP_HLS_accel/INPUT_STREAM_V_id_V' to 'axis' (register, both mode).
+INFO: [RTGEN 206-500] Setting interface mode on port 'ZIP_HLS_accel/INPUT_STREAM_V_dest_V' to 'axis' (register, both mode).
+INFO: [RTGEN 206-500] Setting interface mode on port 'ZIP_HLS_accel/OUTPUT_STREAM_V_data_V' to 'axis' (register, both mode).
+INFO: [RTGEN 206-500] Setting interface mode on port 'ZIP_HLS_accel/OUTPUT_STREAM_V_keep_V' to 'axis' (register, both mode).
+INFO: [RTGEN 206-500] Setting interface mode on port 'ZIP_HLS_accel/OUTPUT_STREAM_V_strb_V' to 'axis' (register, both mode).
+INFO: [RTGEN 206-500] Setting interface mode on port 'ZIP_HLS_accel/OUTPUT_STREAM_V_user_V' to 'axis' (register, both mode).
+INFO: [RTGEN 206-500] Setting interface mode on port 'ZIP_HLS_accel/OUTPUT_STREAM_V_last_V' to 'axis' (register, both mode).
+INFO: [RTGEN 206-500] Setting interface mode on port 'ZIP_HLS_accel/OUTPUT_STREAM_V_id_V' to 'axis' (register, both mode).
+INFO: [RTGEN 206-500] Setting interface mode on port 'ZIP_HLS_accel/OUTPUT_STREAM_V_dest_V' to 'axis' (register, both mode).
+INFO: [RTGEN 206-500] Setting interface mode on port 'ZIP_HLS_accel/size' to 's_axilite & ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'ZIP_HLS_accel/op' to 's_axilite & ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on function 'ZIP_HLS_accel' to 's_axilite & ap_ctrl_hs'.
+INFO: [RTGEN 206-100] Bundling port 'size', 'op' and 'return' to AXI-Lite port ctrl.
+INFO: [RTGEN 206-100] Finished creating RTL model for 'ZIP_HLS_accel'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.33 seconds. CPU system time: 0 seconds. Elapsed time: 0.34 seconds; current allocated memory: 285.191 MB.
+INFO: [RTMG 210-278] Implementing memory 'ZIP_HLS_accel_wrapper_zip_hw_A_ram (RAM_1WnR)' using auto RAMs.
+INFO: [RTMG 210-278] Implementing memory 'ZIP_HLS_accel_wrapper_zip_hw_C_ram (RAM)' using auto RAMs.
+INFO: [HLS 200-111] Finished Generating all RTL models: CPU user time: 0.62 seconds. CPU system time: 0.02 seconds. Elapsed time: 0.73 seconds; current allocated memory: 293.253 MB.
+INFO: [VHDL 208-304] Generating VHDL RTL for ZIP_HLS_accel.
+INFO: [VLOG 209-307] Generating Verilog RTL for ZIP_HLS_accel.
+INFO: [HLS 200-790] **** Loop Constraint Status: All loop constraints were satisfied.
+INFO: [HLS 200-789] **** Estimated Fmax: 383.67 MHz
+INFO: [HLS 200-111] Finished Command csynth_design CPU user time: 5.03 seconds. CPU system time: 0.58 seconds. Elapsed time: 5.8 seconds; current allocated memory: 293.704 MB.
+INFO: [HLS 200-1510] Running: export_design -format ip_catalog -description ZIP -display_name ZIP 
+INFO: [IMPL 213-8] Exporting RTL as a Vivado IP.
+INFO: [HLS 200-802] Generated output file ZIP_prj/zip/impl/export.zip
+INFO: [HLS 200-111] Finished Command export_design CPU user time: 9.21 seconds. CPU system time: 1.73 seconds. Elapsed time: 17.87 seconds; current allocated memory: 297.828 MB.

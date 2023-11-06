@@ -1,0 +1,29 @@
+#-----------------------------------------------------------
+# Vivado v2020.2 (64-bit)
+# SW Build 3064766 on Wed Nov 18 09:12:47 MST 2020
+# IP Build 3064653 on Wed Nov 18 14:17:31 MST 2020
+# Start of session at: Thu Sep  7 17:09:50 2023
+# Process ID: 1176785
+# Current directory: /mnt/data/Xilinx_Workspace/Vivado/ZCU102_10ffts/HLS_accel/mmult/mmult/solution1/impl/ip
+# Command line: vivado -notrace -mode batch -source run_ippack.tcl
+# Log file: /mnt/data/Xilinx_Workspace/Vivado/ZCU102_10ffts/HLS_accel/mmult/mmult/solution1/impl/ip/vivado.log
+# Journal file: /mnt/data/Xilinx_Workspace/Vivado/ZCU102_10ffts/HLS_accel/mmult/mmult/solution1/impl/ip/vivado.jou
+#-----------------------------------------------------------
+source run_ippack.tcl -notrace
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository '/opt/CoE/Xilinx/Vivado/2020.2/data/ip'.
+WARNING: [IP_Flow 19-4832] The IP name 'HLS_accel_ap_fadd_9_full_dsp_32' you have specified is long. The Windows operating system has path length limitations. It is recommended you use shorter names to reduce the likelihood of issues.
+create_ip: Time (s): cpu = 00:00:02 ; elapsed = 00:00:09 . Memory (MB): peak = 2293.988 ; gain = 43.039 ; free physical = 46084 ; free virtual = 59318
+INFO: [IP_Flow 19-1686] Generating 'Synthesis' target for IP 'HLS_accel_ap_fadd_9_full_dsp_32'...
+INFO: [IP_Flow 19-1686] Generating 'Simulation' target for IP 'HLS_accel_ap_fadd_9_full_dsp_32'...
+WARNING: [IP_Flow 19-4832] The IP name 'HLS_accel_ap_faddfsub_9_full_dsp_32' you have specified is long. The Windows operating system has path length limitations. It is recommended you use shorter names to reduce the likelihood of issues.
+INFO: [IP_Flow 19-1686] Generating 'Synthesis' target for IP 'HLS_accel_ap_faddfsub_9_full_dsp_32'...
+INFO: [IP_Flow 19-1686] Generating 'Simulation' target for IP 'HLS_accel_ap_faddfsub_9_full_dsp_32'...
+WARNING: [IP_Flow 19-4832] The IP name 'HLS_accel_ap_fmul_6_max_dsp_32' you have specified is long. The Windows operating system has path length limitations. It is recommended you use shorter names to reduce the likelihood of issues.
+INFO: [IP_Flow 19-1686] Generating 'Synthesis' target for IP 'HLS_accel_ap_fmul_6_max_dsp_32'...
+INFO: [IP_Flow 19-1686] Generating 'Simulation' target for IP 'HLS_accel_ap_fmul_6_max_dsp_32'...
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository '/opt/CoE/Xilinx/Vivado/2020.2/data/ip'.
+INFO: [Common 17-206] Exiting Vivado at Thu Sep  7 17:10:33 2023...

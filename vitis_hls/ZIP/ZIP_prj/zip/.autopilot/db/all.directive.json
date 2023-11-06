@@ -1,0 +1,29 @@
+{"sourceFile": [{
+      "name": "",
+      "directive": [
+        {
+          "functionName": "ZIP_HLS_accel",
+          "label": "",
+          "functionLabel": "",
+          "pragma": {
+            "name": "TOP",
+            "option": [{
+                "name": "name",
+                "value": "ZIP_HLS_accel"
+              }]
+          }
+        },
+        {
+          "functionName": "ZIP_HLS_accel",
+          "label": "",
+          "functionLabel": "",
+          "pragma": {
+            "name": "TOP",
+            "option": [{
+                "name": "name",
+                "value": "ZIP_HLS_accel"
+              }]
+          }
+        }
+      ]
+    }]}

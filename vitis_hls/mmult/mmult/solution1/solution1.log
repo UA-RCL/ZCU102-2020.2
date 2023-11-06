@@ -1,0 +1,194 @@
+==============================================================
+Vitis HLS - High-Level Synthesis from C, C++ and OpenCL v2020.2 (64-bit)
+Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
+==============================================================
+INFO: [HLS 200-1505] Using default flow_target 'vivado'
+INFO: [HLS 200-1510] Running: set_part xczu9eg-ffvb1156-2-e 
+INFO: [HLS 200-10] Setting target device to 'xczu9eg-ffvb1156-2-e'
+INFO: [HLS 200-1510] Running: create_clock -period 3.33 -name default 
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 3.33ns.
+INFO: [HLS 200-1510] Running: set_clock_uncertainty 1 
+INFO: [SYN 201-201] Setting up clock 'default' with an uncertainty of 1ns.
+INFO: [HLS 200-1510] Running: csim_design 
+INFO: [SIM 211-2] *************** CSIM start ***************
+INFO: [SIM 211-4] CSIM will launch GCC as the compiler.
+INFO: [SIM 211-1] CSim done with 0 errors.
+INFO: [SIM 211-3] *************** CSIM finish ***************
+INFO: [HLS 200-111] Finished Command csim_design CPU user time: 6.96 seconds. CPU system time: 0.8 seconds. Elapsed time: 14 seconds; current allocated memory: 206.109 MB.
+INFO: [HLS 200-1510] Running: csynth_design 
+INFO: [HLS 200-111] Finished File checks and directory preparation: CPU user time: 0.01 seconds. CPU system time: 0 seconds. Elapsed time: 0.01 seconds; current allocated memory: 206.247 MB.
+INFO: [HLS 200-10] Analyzing design file 'matrix_multiply_axiwrapper.cpp' ... 
+WARNING: [HLS 207-943] HLS Linear Algebra Library is deprecated in Vitis HLS, and will be removed in Release 2021.1. For matrix decomposition please consider the Vitis Solver Library (https://github.com/Xilinx/Vitis_Libraries).: /opt/CoE/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/39/hls_linear_algebra.h:46:2
+WARNING: [HLS 207-5510] 'Resource pragma' is deprecated, and it will be removed in future release. It is suggested to replace it with 'bind_op/bind_storage pragma'.: /opt/CoE/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/hls_hotbm_apfixed.h:117:9
+WARNING: [HLS 207-5510] 'Resource pragma' is deprecated, and it will be removed in future release. It is suggested to replace it with 'bind_op/bind_storage pragma'.: /opt/CoE/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/hls_hotbm_apfixed.h:118:9
+WARNING: [HLS 207-5510] 'Resource pragma' is deprecated, and it will be removed in future release. It is suggested to replace it with 'bind_op/bind_storage pragma'.: /opt/CoE/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/hls_hotbm_apfixed.h:119:9
+WARNING: [HLS 207-5510] 'Resource pragma' is deprecated, and it will be removed in future release. It is suggested to replace it with 'bind_op/bind_storage pragma'.: /opt/CoE/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/hls_hotbm_apfixed.h:120:9
+WARNING: [HLS 207-5510] 'Resource pragma' is deprecated, and it will be removed in future release. It is suggested to replace it with 'bind_op/bind_storage pragma'.: /opt/CoE/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/hls_hotbm_apfixed.h:121:9
+WARNING: [HLS 207-5510] 'Resource pragma' is deprecated, and it will be removed in future release. It is suggested to replace it with 'bind_op/bind_storage pragma'.: /opt/CoE/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/hls_hotbm_apfixed.h:151:9
+WARNING: [HLS 207-5510] 'Resource pragma' is deprecated, and it will be removed in future release. It is suggested to replace it with 'bind_op/bind_storage pragma'.: /opt/CoE/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/hls_hotbm_apfixed.h:152:9
+WARNING: [HLS 207-5510] 'Resource pragma' is deprecated, and it will be removed in future release. It is suggested to replace it with 'bind_op/bind_storage pragma'.: /opt/CoE/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/hls_hotbm_apfixed.h:153:9
+WARNING: [HLS 207-5510] 'Resource pragma' is deprecated, and it will be removed in future release. It is suggested to replace it with 'bind_op/bind_storage pragma'.: /opt/CoE/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/hls_hotbm_apfixed.h:154:9
+WARNING: [HLS 207-5510] 'Resource pragma' is deprecated, and it will be removed in future release. It is suggested to replace it with 'bind_op/bind_storage pragma'.: /opt/CoE/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/hls_hotbm_apfixed.h:155:9
+WARNING: [HLS 207-5510] 'Resource pragma' is deprecated, and it will be removed in future release. It is suggested to replace it with 'bind_op/bind_storage pragma'.: /opt/CoE/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/hls_hotbm_apfixed.h:156:9
+WARNING: [HLS 207-5510] 'Resource pragma' is deprecated, and it will be removed in future release. It is suggested to replace it with 'bind_op/bind_storage pragma'.: /opt/CoE/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/hls_hotbm_apfixed.h:157:9
+WARNING: [HLS 207-5510] 'Resource pragma' is deprecated, and it will be removed in future release. It is suggested to replace it with 'bind_op/bind_storage pragma'.: /opt/CoE/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/hls_hotbm_apfixed.h:158:9
+WARNING: [HLS 207-5510] 'Resource pragma' is deprecated, and it will be removed in future release. It is suggested to replace it with 'bind_op/bind_storage pragma'.: /opt/CoE/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/hls_hotbm_apfixed.h:159:9
+WARNING: [HLS 207-5510] 'Resource pragma' is deprecated, and it will be removed in future release. It is suggested to replace it with 'bind_op/bind_storage pragma'.: /opt/CoE/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/hls_hotbm_apfixed.h:160:9
+WARNING: [HLS 207-5510] 'Resource pragma' is deprecated, and it will be removed in future release. It is suggested to replace it with 'bind_op/bind_storage pragma'.: /opt/CoE/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/hls_hotbm_apfixed.h:210:9
+WARNING: [HLS 207-5510] 'Resource pragma' is deprecated, and it will be removed in future release. It is suggested to replace it with 'bind_op/bind_storage pragma'.: /opt/CoE/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/hls_hotbm_apfixed.h:211:9
+WARNING: [HLS 207-5510] 'Resource pragma' is deprecated, and it will be removed in future release. It is suggested to replace it with 'bind_op/bind_storage pragma'.: /opt/CoE/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/hls_hotbm_apfixed.h:212:9
+WARNING: [HLS 207-5510] 'Resource pragma' is deprecated, and it will be removed in future release. It is suggested to replace it with 'bind_op/bind_storage pragma'.: /opt/CoE/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/hls_hotbm_apfixed.h:239:9
+WARNING: [HLS 207-5510] 'Resource pragma' is deprecated, and it will be removed in future release. It is suggested to replace it with 'bind_op/bind_storage pragma'.: /opt/CoE/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/hls_hotbm_apfixed.h:240:9
+WARNING: [HLS 207-5510] 'Resource pragma' is deprecated, and it will be removed in future release. It is suggested to replace it with 'bind_op/bind_storage pragma'.: /opt/CoE/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/hls_hotbm_apfixed.h:241:9
+WARNING: [HLS 207-5510] 'Resource pragma' is deprecated, and it will be removed in future release. It is suggested to replace it with 'bind_op/bind_storage pragma'.: /opt/CoE/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/hls_hotbm_apfixed.h:242:9
+WARNING: [HLS 207-5510] 'Resource pragma' is deprecated, and it will be removed in future release. It is suggested to replace it with 'bind_op/bind_storage pragma'.: /opt/CoE/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/hls_hotbm_apfixed.h:243:9
+WARNING: [HLS 207-5510] 'Resource pragma' is deprecated, and it will be removed in future release. It is suggested to replace it with 'bind_op/bind_storage pragma'.: /opt/CoE/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/hls_hotbm_apfixed.h:244:9
+WARNING: [HLS 207-5510] 'Resource pragma' is deprecated, and it will be removed in future release. It is suggested to replace it with 'bind_op/bind_storage pragma'.: /opt/CoE/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/hls_hotbm_apfixed.h:280:9
+WARNING: [HLS 207-5510] 'Resource pragma' is deprecated, and it will be removed in future release. It is suggested to replace it with 'bind_op/bind_storage pragma'.: /opt/CoE/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/hls_hotbm_apfixed.h:281:9
+INFO: [HLS 200-10] Analyzing design file 'matrix_multiply.cpp' ... 
+WARNING: [HLS 207-943] HLS Linear Algebra Library is deprecated in Vitis HLS, and will be removed in Release 2021.1. For matrix decomposition please consider the Vitis Solver Library (https://github.com/Xilinx/Vitis_Libraries).: /opt/CoE/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/39/hls_linear_algebra.h:46:2
+WARNING: [HLS 207-5510] 'Resource pragma' is deprecated, and it will be removed in future release. It is suggested to replace it with 'bind_op/bind_storage pragma'.: /opt/CoE/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/hls_hotbm_apfixed.h:117:9
+WARNING: [HLS 207-5510] 'Resource pragma' is deprecated, and it will be removed in future release. It is suggested to replace it with 'bind_op/bind_storage pragma'.: /opt/CoE/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/hls_hotbm_apfixed.h:118:9
+WARNING: [HLS 207-5510] 'Resource pragma' is deprecated, and it will be removed in future release. It is suggested to replace it with 'bind_op/bind_storage pragma'.: /opt/CoE/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/hls_hotbm_apfixed.h:119:9
+WARNING: [HLS 207-5510] 'Resource pragma' is deprecated, and it will be removed in future release. It is suggested to replace it with 'bind_op/bind_storage pragma'.: /opt/CoE/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/hls_hotbm_apfixed.h:120:9
+WARNING: [HLS 207-5510] 'Resource pragma' is deprecated, and it will be removed in future release. It is suggested to replace it with 'bind_op/bind_storage pragma'.: /opt/CoE/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/hls_hotbm_apfixed.h:121:9
+WARNING: [HLS 207-5510] 'Resource pragma' is deprecated, and it will be removed in future release. It is suggested to replace it with 'bind_op/bind_storage pragma'.: /opt/CoE/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/hls_hotbm_apfixed.h:151:9
+WARNING: [HLS 207-5510] 'Resource pragma' is deprecated, and it will be removed in future release. It is suggested to replace it with 'bind_op/bind_storage pragma'.: /opt/CoE/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/hls_hotbm_apfixed.h:152:9
+WARNING: [HLS 207-5510] 'Resource pragma' is deprecated, and it will be removed in future release. It is suggested to replace it with 'bind_op/bind_storage pragma'.: /opt/CoE/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/hls_hotbm_apfixed.h:153:9
+WARNING: [HLS 207-5510] 'Resource pragma' is deprecated, and it will be removed in future release. It is suggested to replace it with 'bind_op/bind_storage pragma'.: /opt/CoE/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/hls_hotbm_apfixed.h:154:9
+WARNING: [HLS 207-5510] 'Resource pragma' is deprecated, and it will be removed in future release. It is suggested to replace it with 'bind_op/bind_storage pragma'.: /opt/CoE/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/hls_hotbm_apfixed.h:155:9
+WARNING: [HLS 207-5510] 'Resource pragma' is deprecated, and it will be removed in future release. It is suggested to replace it with 'bind_op/bind_storage pragma'.: /opt/CoE/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/hls_hotbm_apfixed.h:156:9
+WARNING: [HLS 207-5510] 'Resource pragma' is deprecated, and it will be removed in future release. It is suggested to replace it with 'bind_op/bind_storage pragma'.: /opt/CoE/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/hls_hotbm_apfixed.h:157:9
+WARNING: [HLS 207-5510] 'Resource pragma' is deprecated, and it will be removed in future release. It is suggested to replace it with 'bind_op/bind_storage pragma'.: /opt/CoE/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/hls_hotbm_apfixed.h:158:9
+WARNING: [HLS 207-5510] 'Resource pragma' is deprecated, and it will be removed in future release. It is suggested to replace it with 'bind_op/bind_storage pragma'.: /opt/CoE/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/hls_hotbm_apfixed.h:159:9
+WARNING: [HLS 207-5510] 'Resource pragma' is deprecated, and it will be removed in future release. It is suggested to replace it with 'bind_op/bind_storage pragma'.: /opt/CoE/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/hls_hotbm_apfixed.h:160:9
+WARNING: [HLS 207-5510] 'Resource pragma' is deprecated, and it will be removed in future release. It is suggested to replace it with 'bind_op/bind_storage pragma'.: /opt/CoE/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/hls_hotbm_apfixed.h:210:9
+WARNING: [HLS 207-5510] 'Resource pragma' is deprecated, and it will be removed in future release. It is suggested to replace it with 'bind_op/bind_storage pragma'.: /opt/CoE/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/hls_hotbm_apfixed.h:211:9
+WARNING: [HLS 207-5510] 'Resource pragma' is deprecated, and it will be removed in future release. It is suggested to replace it with 'bind_op/bind_storage pragma'.: /opt/CoE/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/hls_hotbm_apfixed.h:212:9
+WARNING: [HLS 207-5510] 'Resource pragma' is deprecated, and it will be removed in future release. It is suggested to replace it with 'bind_op/bind_storage pragma'.: /opt/CoE/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/hls_hotbm_apfixed.h:239:9
+WARNING: [HLS 207-5510] 'Resource pragma' is deprecated, and it will be removed in future release. It is suggested to replace it with 'bind_op/bind_storage pragma'.: /opt/CoE/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/hls_hotbm_apfixed.h:240:9
+WARNING: [HLS 207-5510] 'Resource pragma' is deprecated, and it will be removed in future release. It is suggested to replace it with 'bind_op/bind_storage pragma'.: /opt/CoE/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/hls_hotbm_apfixed.h:241:9
+WARNING: [HLS 207-5510] 'Resource pragma' is deprecated, and it will be removed in future release. It is suggested to replace it with 'bind_op/bind_storage pragma'.: /opt/CoE/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/hls_hotbm_apfixed.h:242:9
+WARNING: [HLS 207-5510] 'Resource pragma' is deprecated, and it will be removed in future release. It is suggested to replace it with 'bind_op/bind_storage pragma'.: /opt/CoE/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/hls_hotbm_apfixed.h:243:9
+WARNING: [HLS 207-5510] 'Resource pragma' is deprecated, and it will be removed in future release. It is suggested to replace it with 'bind_op/bind_storage pragma'.: /opt/CoE/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/hls_hotbm_apfixed.h:244:9
+WARNING: [HLS 207-5510] 'Resource pragma' is deprecated, and it will be removed in future release. It is suggested to replace it with 'bind_op/bind_storage pragma'.: /opt/CoE/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/hls_hotbm_apfixed.h:280:9
+WARNING: [HLS 207-5510] 'Resource pragma' is deprecated, and it will be removed in future release. It is suggested to replace it with 'bind_op/bind_storage pragma'.: /opt/CoE/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/hls_hotbm_apfixed.h:281:9
+INFO: [HLS 200-111] Finished Source Code Analysis and Preprocessing: CPU user time: 19.45 seconds. CPU system time: 1.38 seconds. Elapsed time: 27.44 seconds; current allocated memory: 210.178 MB.
+INFO: [HLS 200-777] Using interface defaults for 'Vivado' flow target.
+INFO: [HLS 214-131] Inlining function 'hls::axis<float, 1ul, 1ul, 1ul>::get_user_ptr()' into 'hls::stream<hls::axis<float, 1ul, 1ul, 1ul>, 0>::read(hls::axis<float, 1ul, 1ul, 1ul>&)' (/opt/CoE/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_axi_sdata.h:283:50)
+INFO: [HLS 214-131] Inlining function 'hls::axis<float, 1ul, 1ul, 1ul>::get_dest_ptr()' into 'hls::stream<hls::axis<float, 1ul, 1ul, 1ul>, 0>::read(hls::axis<float, 1ul, 1ul, 1ul>&)' (/opt/CoE/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_axi_sdata.h:286:25)
+INFO: [HLS 214-131] Inlining function 'hls::axis<float, 1ul, 1ul, 1ul>::get_id_ptr()' into 'hls::stream<hls::axis<float, 1ul, 1ul, 1ul>, 0>::read(hls::axis<float, 1ul, 1ul, 1ul>&)' (/opt/CoE/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_axi_sdata.h:285:67)
+INFO: [HLS 214-131] Inlining function 'hls::axis<float, 1ul, 1ul, 1ul>::get_user_ptr()' into 'hls::stream<hls::axis<float, 1ul, 1ul, 1ul>, 0>::read(hls::axis<float, 1ul, 1ul, 1ul>&)' (/opt/CoE/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_axi_sdata.h:285:36)
+INFO: [HLS 214-131] Inlining function 'hls::axis<float, 1ul, 1ul, 1ul>::get_dest_ptr()' into 'hls::stream<hls::axis<float, 1ul, 1ul, 1ul>, 0>::read(hls::axis<float, 1ul, 1ul, 1ul>&)' (/opt/CoE/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_axi_sdata.h:284:39)
+INFO: [HLS 214-131] Inlining function 'hls::axis<float, 1ul, 1ul, 1ul>::get_id_ptr()' into 'hls::stream<hls::axis<float, 1ul, 1ul, 1ul>, 0>::read(hls::axis<float, 1ul, 1ul, 1ul>&)' (/opt/CoE/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_axi_sdata.h:284:23)
+INFO: [HLS 214-131] Inlining function 'hls::axis<float, 1ul, 1ul, 1ul>::get_user_ptr()' into 'hls::stream<hls::axis<float, 1ul, 1ul, 1ul>, 0>::write(hls::axis<float, 1ul, 1ul, 1ul> const&)' (/opt/CoE/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_axi_sdata.h:304:51)
+INFO: [HLS 214-131] Inlining function 'hls::axis<float, 1ul, 1ul, 1ul>::get_dest_ptr()' into 'hls::stream<hls::axis<float, 1ul, 1ul, 1ul>, 0>::write(hls::axis<float, 1ul, 1ul, 1ul> const&)' (/opt/CoE/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_axi_sdata.h:307:26)
+INFO: [HLS 214-131] Inlining function 'hls::axis<float, 1ul, 1ul, 1ul>::get_id_ptr()' into 'hls::stream<hls::axis<float, 1ul, 1ul, 1ul>, 0>::write(hls::axis<float, 1ul, 1ul, 1ul> const&)' (/opt/CoE/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_axi_sdata.h:306:68)
+INFO: [HLS 214-131] Inlining function 'hls::axis<float, 1ul, 1ul, 1ul>::get_user_ptr()' into 'hls::stream<hls::axis<float, 1ul, 1ul, 1ul>, 0>::write(hls::axis<float, 1ul, 1ul, 1ul> const&)' (/opt/CoE/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_axi_sdata.h:306:37)
+INFO: [HLS 214-131] Inlining function 'hls::axis<float, 1ul, 1ul, 1ul>::get_dest_ptr()' into 'hls::stream<hls::axis<float, 1ul, 1ul, 1ul>, 0>::write(hls::axis<float, 1ul, 1ul, 1ul> const&)' (/opt/CoE/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_axi_sdata.h:305:40)
+INFO: [HLS 214-131] Inlining function 'hls::axis<float, 1ul, 1ul, 1ul>::get_id_ptr()' into 'hls::stream<hls::axis<float, 1ul, 1ul, 1ul>, 0>::write(hls::axis<float, 1ul, 1ul, 1ul> const&)' (/opt/CoE/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_axi_sdata.h:305:24)
+INFO: [HLS 214-131] Inlining function 'hls::stream<hls::axis<float, 1ul, 1ul, 1ul>, 0>::read(hls::axis<float, 1ul, 1ul, 1ul>&)' into 'wrapper_mmult_hw(hls::stream<hls::axis<float, 1ul, 1ul, 1ul>, 0>&, hls::stream<hls::axis<float, 1ul, 1ul, 1ul>, 0>&)' (matrix_multiply_axiwrapper.cpp:91:12)
+INFO: [HLS 214-131] Inlining function 'hls::stream<hls::axis<float, 1ul, 1ul, 1ul>, 0>::write(hls::axis<float, 1ul, 1ul, 1ul> const&)' into 'wrapper_mmult_hw(hls::stream<hls::axis<float, 1ul, 1ul, 1ul>, 0>&, hls::stream<hls::axis<float, 1ul, 1ul, 1ul>, 0>&)' (matrix_multiply_axiwrapper.cpp:176:15)
+INFO: [HLS 214-131] Inlining function 'hls::stream<hls::axis<float, 1ul, 1ul, 1ul>, 0>::read(hls::axis<float, 1ul, 1ul, 1ul>&)' into 'wrapper_mmult_hw(hls::stream<hls::axis<float, 1ul, 1ul, 1ul>, 0>&, hls::stream<hls::axis<float, 1ul, 1ul, 1ul>, 0>&)' (matrix_multiply_axiwrapper.cpp:102:12)
+INFO: [HLS 214-131] Inlining function 'hls::stream<hls::axis<float, 1ul, 1ul, 1ul>, 0>::read(hls::axis<float, 1ul, 1ul, 1ul>&)' into 'wrapper_mmult_hw(hls::stream<hls::axis<float, 1ul, 1ul, 1ul>, 0>&, hls::stream<hls::axis<float, 1ul, 1ul, 1ul>, 0>&)' (matrix_multiply_axiwrapper.cpp:126:12)
+INFO: [HLS 214-131] Inlining function 'hls::stream<hls::axis<float, 1ul, 1ul, 1ul>, 0>::read(hls::axis<float, 1ul, 1ul, 1ul>&)' into 'wrapper_mmult_hw(hls::stream<hls::axis<float, 1ul, 1ul, 1ul>, 0>&, hls::stream<hls::axis<float, 1ul, 1ul, 1ul>, 0>&)' (matrix_multiply_axiwrapper.cpp:114:12)
+INFO: [HLS 214-178] Inlining function 'matrix_multiply_top(float (*) [64], float (*) [64], float (*) [4], float (*) [4], float (*) [4], float (*) [4])' into 'wrapper_mmult_hw(hls::stream<hls::axis<float, 1ul, 1ul, 1ul>, 0>&, hls::stream<hls::axis<float, 1ul, 1ul, 1ul>, 0>&)' (matrix_multiply_axiwrapper.cpp:71:0)
+INFO: [HLS 200-111] Finished Compiling Optimization and Transform: CPU user time: 1.98 seconds. CPU system time: 0.26 seconds. Elapsed time: 5.44 seconds; current allocated memory: 211.012 MB.
+INFO: [HLS 200-111] Finished Checking Pragmas: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0 seconds; current allocated memory: 211.013 MB.
+INFO: [HLS 200-10] Starting code transformations ...
+INFO: [HLS 200-111] Finished Standard Transforms: CPU user time: 0.16 seconds. CPU system time: 0 seconds. Elapsed time: 2.05 seconds; current allocated memory: 220.134 MB.
+INFO: [HLS 200-10] Checking synthesizability ...
+INFO: [HLS 200-111] Finished Checking Synthesizability: CPU user time: 0.14 seconds. CPU system time: 0 seconds. Elapsed time: 0.16 seconds; current allocated memory: 232.770 MB.
+INFO: [XFORM 203-510] Pipelining loop 'lreorder2' (matrix_multiply.cpp:121) in function 'wrapper_mmult_hw' automatically.
+INFO: [XFORM 203-502] Unrolling all sub-loops inside loop 'lreorder2' (matrix_multiply.cpp:121) in function 'wrapper_mmult_hw' for pipelining.
+WARNING: [XFORM 203-561] Updating loop upper bound from 4 to 8 for loop 'VITIS_LOOP_162_9' (matrix_multiply_axiwrapper.cpp:162:29) in function 'wrapper_mmult_hw'.
+WARNING: [XFORM 203-561] Updating loop lower bound from 4 to 8 for loop 'VITIS_LOOP_162_9' (matrix_multiply_axiwrapper.cpp:162:29) in function 'wrapper_mmult_hw'.
+INFO: [HLS 200-489] Unrolling loop 'lreorder3' (matrix_multiply.cpp:124) in function 'wrapper_mmult_hw' completely with a factor of 4.
+INFO: [XFORM 203-102] Partitioning array 'temp_sumr' (matrix_multiply.cpp:49) automatically.
+INFO: [XFORM 203-102] Partitioning array 'temp_sumi' (matrix_multiply.cpp:50) automatically.
+INFO: [HLS 200-111] Finished Loop, function and other optimizations: CPU user time: 0.28 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.3 seconds; current allocated memory: 267.557 MB.
+INFO: [XFORM 203-541] Flattening a loop nest 'VITIS_LOOP_84_1' (matrix_multiply_axiwrapper.cpp:84:28) in function 'wrapper_mmult_hw'.
+INFO: [XFORM 203-541] Flattening a loop nest 'VITIS_LOOP_95_3' (matrix_multiply_axiwrapper.cpp:95:28) in function 'wrapper_mmult_hw'.
+INFO: [XFORM 203-541] Flattening a loop nest 'VITIS_LOOP_107_5' (matrix_multiply_axiwrapper.cpp:107:29) in function 'wrapper_mmult_hw'.
+INFO: [XFORM 203-541] Flattening a loop nest 'VITIS_LOOP_119_7' (matrix_multiply_axiwrapper.cpp:119:29) in function 'wrapper_mmult_hw'.
+INFO: [XFORM 203-541] Flattening a loop nest 'lreorder1' (matrix_multiply.cpp:117:14) in function 'wrapper_mmult_hw'.
+INFO: [XFORM 203-541] Flattening a loop nest 'VITIS_LOOP_162_9' (matrix_multiply_axiwrapper.cpp:162:29) in function 'wrapper_mmult_hw'.
+INFO: [HLS 200-472] Inferring partial write operation for 'Ar' (matrix_multiply_axiwrapper.cpp:92:13)
+INFO: [HLS 200-472] Inferring partial write operation for 'Ai' (matrix_multiply_axiwrapper.cpp:103:13)
+INFO: [HLS 200-472] Inferring partial write operation for 'Br' (matrix_multiply_axiwrapper.cpp:115:13)
+INFO: [HLS 200-472] Inferring partial write operation for 'Bi' (matrix_multiply_axiwrapper.cpp:127:13)
+INFO: [HLS 200-472] Inferring partial write operation for 'C' (matrix_multiply.cpp:132:30)
+INFO: [HLS 200-472] Inferring partial write operation for 'C' (matrix_multiply.cpp:133:30)
+INFO: [HLS 200-111] Finished Architecture Synthesis: CPU user time: 0.22 seconds. CPU system time: 0 seconds. Elapsed time: 0.24 seconds; current allocated memory: 277.607 MB.
+INFO: [HLS 200-10] Starting hardware synthesis ...
+INFO: [HLS 200-10] Synthesizing 'HLS_accel' ...
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'wrapper_mmult_hw' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [HLS 200-1457] Automatically inferring 1WnR RAM type for array 'Bi'. Use bind_storage pragma to overwrite if needed.
+INFO: [HLS 200-1457] Automatically inferring 1WnR RAM type for array 'Br'. Use bind_storage pragma to overwrite if needed.
+INFO: [SCHED 204-61] Pipelining loop 'VITIS_LOOP_84_1_VITIS_LOOP_86_2'.
+INFO: [HLS 200-1470] Pipelining result : Target II = 1, Final II = 1, Depth = 2, loop 'VITIS_LOOP_84_1_VITIS_LOOP_86_2'
+INFO: [SCHED 204-61] Pipelining loop 'VITIS_LOOP_95_3_VITIS_LOOP_97_4'.
+INFO: [HLS 200-1470] Pipelining result : Target II = 1, Final II = 1, Depth = 2, loop 'VITIS_LOOP_95_3_VITIS_LOOP_97_4'
+INFO: [SCHED 204-61] Pipelining loop 'VITIS_LOOP_107_5_VITIS_LOOP_109_6'.
+INFO: [HLS 200-1470] Pipelining result : Target II = 1, Final II = 1, Depth = 2, loop 'VITIS_LOOP_107_5_VITIS_LOOP_109_6'
+INFO: [SCHED 204-61] Pipelining loop 'VITIS_LOOP_119_7_VITIS_LOOP_121_8'.
+INFO: [HLS 200-1470] Pipelining result : Target II = 1, Final II = 1, Depth = 2, loop 'VITIS_LOOP_119_7_VITIS_LOOP_121_8'
+INFO: [SCHED 204-61] Pipelining loop 'lreorder1_lreorder2'.
+WARNING: [HLS 200-880] The II Violation in module 'wrapper_mmult_hw' (loop 'lreorder1_lreorder2'): Unable to enforce a carried dependence constraint (II = 1, distance = 1, offset = 0) between 'store' operation ('resultr_0_write_ln131', matrix_multiply.cpp:131) of variable 'resultr_1', matrix_multiply.cpp:127 on local variable 'resultr_0' and 'load' operation ('resultr_0_load', matrix_multiply.cpp:125) on local variable 'resultr_0'.
+WARNING: [HLS 200-880] The II Violation in module 'wrapper_mmult_hw' (loop 'lreorder1_lreorder2'): Unable to enforce a carried dependence constraint (II = 2, distance = 1, offset = 0) between 'store' operation ('resultr_0_write_ln131', matrix_multiply.cpp:131) of variable 'resultr_1', matrix_multiply.cpp:127 on local variable 'resultr_0' and 'load' operation ('resultr_0_load', matrix_multiply.cpp:125) on local variable 'resultr_0'.
+WARNING: [HLS 200-880] The II Violation in module 'wrapper_mmult_hw' (loop 'lreorder1_lreorder2'): Unable to enforce a carried dependence constraint (II = 3, distance = 1, offset = 0) between 'store' operation ('resultr_0_write_ln131', matrix_multiply.cpp:131) of variable 'resultr_1', matrix_multiply.cpp:127 on local variable 'resultr_0' and 'load' operation ('resultr_0_load', matrix_multiply.cpp:125) on local variable 'resultr_0'.
+WARNING: [HLS 200-880] The II Violation in module 'wrapper_mmult_hw' (loop 'lreorder1_lreorder2'): Unable to enforce a carried dependence constraint (II = 4, distance = 1, offset = 0) between 'store' operation ('resultr_0_write_ln131', matrix_multiply.cpp:131) of variable 'resultr_1', matrix_multiply.cpp:127 on local variable 'resultr_0' and 'load' operation ('resultr_0_load', matrix_multiply.cpp:125) on local variable 'resultr_0'.
+WARNING: [HLS 200-880] The II Violation in module 'wrapper_mmult_hw' (loop 'lreorder1_lreorder2'): Unable to enforce a carried dependence constraint (II = 7, distance = 1, offset = 0) between 'store' operation ('resultr_0_write_ln131', matrix_multiply.cpp:131) of variable 'resultr_1', matrix_multiply.cpp:127 on local variable 'resultr_0' and 'load' operation ('resultr_0_load', matrix_multiply.cpp:125) on local variable 'resultr_0'.
+WARNING: [HLS 200-880] The II Violation in module 'wrapper_mmult_hw' (loop 'lreorder1_lreorder2'): Unable to enforce a carried dependence constraint (II = 9, distance = 1, offset = 0) between 'store' operation ('resultr_0_write_ln131', matrix_multiply.cpp:131) of variable 'resultr_1', matrix_multiply.cpp:127 on local variable 'resultr_0' and 'load' operation ('resultr_0_load', matrix_multiply.cpp:125) on local variable 'resultr_0'.
+WARNING: [HLS 200-880] The II Violation in module 'wrapper_mmult_hw' (loop 'lreorder1_lreorder2'): Unable to enforce a carried dependence constraint (II = 10, distance = 1, offset = 0) between 'store' operation ('resultr_0_write_ln131', matrix_multiply.cpp:131) of variable 'resultr_1', matrix_multiply.cpp:127 on local variable 'resultr_0' and 'load' operation ('resultr_0_load', matrix_multiply.cpp:125) on local variable 'resultr_0'.
+INFO: [HLS 200-1470] Pipelining result : Target II = 1, Final II = 11, Depth = 41, loop 'lreorder1_lreorder2'
+INFO: [SCHED 204-61] Pipelining loop 'VITIS_LOOP_162_9_VITIS_LOOP_164_10'.
+INFO: [HLS 200-1470] Pipelining result : Target II = 1, Final II = 1, Depth = 3, loop 'VITIS_LOOP_162_9_VITIS_LOOP_164_10'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.21 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.52 seconds; current allocated memory: 279.007 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.24 seconds. CPU system time: 0 seconds. Elapsed time: 0.26 seconds; current allocated memory: 280.750 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'HLS_accel' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.22 seconds. CPU system time: 0 seconds. Elapsed time: 0.22 seconds; current allocated memory: 280.822 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.04 seconds. CPU system time: 0 seconds. Elapsed time: 0.03 seconds; current allocated memory: 280.928 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'wrapper_mmult_hw' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-100] Generating core module 'fadd_32ns_32ns_32_11_full_dsp_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'faddfsub_32ns_32ns_32_11_full_dsp_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'fmul_32ns_32ns_32_8_max_dsp_1': 2 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'wrapper_mmult_hw'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.1 seconds. CPU system time: 0 seconds. Elapsed time: 0.12 seconds; current allocated memory: 283.372 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'HLS_accel' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+WARNING: [RTGEN 206-101] Design contains AXI ports. Reset is fixed to synchronous and active low.
+INFO: [RTGEN 206-500] Setting interface mode on port 'HLS_accel/INPUT_STREAM_V_data_V' to 'axis' (register, both mode).
+INFO: [RTGEN 206-500] Setting interface mode on port 'HLS_accel/INPUT_STREAM_V_keep_V' to 'axis' (register, both mode).
+INFO: [RTGEN 206-500] Setting interface mode on port 'HLS_accel/INPUT_STREAM_V_strb_V' to 'axis' (register, both mode).
+INFO: [RTGEN 206-500] Setting interface mode on port 'HLS_accel/INPUT_STREAM_V_user_V' to 'axis' (register, both mode).
+INFO: [RTGEN 206-500] Setting interface mode on port 'HLS_accel/INPUT_STREAM_V_last_V' to 'axis' (register, both mode).
+INFO: [RTGEN 206-500] Setting interface mode on port 'HLS_accel/INPUT_STREAM_V_id_V' to 'axis' (register, both mode).
+INFO: [RTGEN 206-500] Setting interface mode on port 'HLS_accel/INPUT_STREAM_V_dest_V' to 'axis' (register, both mode).
+INFO: [RTGEN 206-500] Setting interface mode on port 'HLS_accel/OUTPUT_STREAM_V_data_V' to 'axis' (register, both mode).
+INFO: [RTGEN 206-500] Setting interface mode on port 'HLS_accel/OUTPUT_STREAM_V_keep_V' to 'axis' (register, both mode).
+INFO: [RTGEN 206-500] Setting interface mode on port 'HLS_accel/OUTPUT_STREAM_V_strb_V' to 'axis' (register, both mode).
+INFO: [RTGEN 206-500] Setting interface mode on port 'HLS_accel/OUTPUT_STREAM_V_user_V' to 'axis' (register, both mode).
+INFO: [RTGEN 206-500] Setting interface mode on port 'HLS_accel/OUTPUT_STREAM_V_last_V' to 'axis' (register, both mode).
+INFO: [RTGEN 206-500] Setting interface mode on port 'HLS_accel/OUTPUT_STREAM_V_id_V' to 'axis' (register, both mode).

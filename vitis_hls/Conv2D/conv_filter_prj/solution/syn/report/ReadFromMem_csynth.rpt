@@ -1,0 +1,159 @@
+
+
+================================================================
+== Vitis HLS Report for 'ReadFromMem'
+================================================================
+* Date:           Thu Sep  7 16:46:12 2023
+
+* Version:        2020.2 (Build 3064766 on Wed Nov 18 09:12:47 MST 2020)
+* Project:        conv_filter_prj
+* Solution:       solution (Vivado IP Flow Target)
+* Product family: zynquplus
+* Target device:  xczu9eg-ffvb1156-2-e
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing: 
+    * Summary: 
+    +--------+---------+----------+------------+
+    |  Clock |  Target | Estimated| Uncertainty|
+    +--------+---------+----------+------------+
+    |ap_clk  |  3.33 ns|  1.237 ns|     1.00 ns|
+    +--------+---------+----------+------------+
+
++ Latency: 
+    * Summary: 
+    +---------+---------+----------+----------+-----+-----+---------+
+    |  Latency (cycles) |  Latency (absolute) |  Interval | Pipeline|
+    |   min   |   max   |    min   |    max   | min | max |   Type  |
+    +---------+---------+----------+----------+-----+-----+---------+
+    |      131|      131|  0.437 us|  0.437 us|  131|  131|     none|
+    +---------+---------+----------+----------+-----+-----+---------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        +--------------+---------+---------+----------+-----------+-----------+------+----------+
+        |              |  Latency (cycles) | Iteration|  Initiation Interval  | Trip |          |
+        |   Loop Name  |   min   |   max   |  Latency |  achieved |   target  | Count| Pipelined|
+        +--------------+---------+---------+----------+-----------+-----------+------+----------+
+        |- read_coefs  |      129|      129|         3|          1|          1|   128|       yes|
+        +--------------+---------+---------+----------+-----------+-----------+------+----------+
+
+
+
+================================================================
+== Utilization Estimates
+================================================================
+* Summary: 
++-----------------+---------+------+--------+--------+-----+
+|       Name      | BRAM_18K|  DSP |   FF   |   LUT  | URAM|
++-----------------+---------+------+--------+--------+-----+
+|DSP              |        -|     -|       -|       -|    -|
+|Expression       |        -|     -|       0|      47|    -|
+|FIFO             |        -|     -|       -|       -|    -|
+|Instance         |        -|     -|       -|       -|    -|
+|Memory           |        -|     -|       -|       -|    -|
+|Multiplexer      |        -|     -|       -|      74|    -|
+|Register         |        -|     -|      50|       -|    -|
++-----------------+---------+------+--------+--------+-----+
+|Total            |        0|     0|      50|     121|    0|
++-----------------+---------+------+--------+--------+-----+
+|Available        |     1824|  2520|  548160|  274080|    0|
++-----------------+---------+------+--------+--------+-----+
+|Utilization (%)  |        0|     0|      ~0|      ~0|    0|
++-----------------+---------+------+--------+--------+-----+
+
++ Detail: 
+    * Instance: 
+    N/A
+
+    * DSP: 
+    N/A
+
+    * Memory: 
+    N/A
+
+    * FIFO: 
+    N/A
+
+    * Expression: 
+    +----------------------------------+----------+----+---+----+------------+------------+
+    |           Variable Name          | Operation| DSP| FF| LUT| Bitwidth P0| Bitwidth P1|
+    +----------------------------------+----------+----+---+----+------------+------------+
+    |add_ln37_fu_79_p2                 |         +|   0|  0|  15|           8|           1|
+    |ap_block_pp0_stage0_01001         |       and|   0|  0|   2|           1|           1|
+    |ap_block_state4_pp0_stage0_iter2  |       and|   0|  0|   2|           1|           1|
+    |icmp_ln37_fu_85_p2                |      icmp|   0|  0|  11|           8|           9|
+    |icmp_ln39_fu_100_p2               |      icmp|   0|  0|  11|           8|           7|
+    |ap_block_state1                   |        or|   0|  0|   2|           1|           1|
+    |ap_enable_pp0                     |       xor|   0|  0|   2|           1|           2|
+    |ap_enable_reg_pp0_iter1           |       xor|   0|  0|   2|           2|           1|
+    +----------------------------------+----------+----+---+----+------------+------------+
+    |Total                             |          |   0|  0|  47|          30|          23|
+    +----------------------------------+----------+----+---+----+------------+------------+
+
+    * Multiplexer: 
+    +-------------------------+----+-----------+-----+-----------+
+    |           Name          | LUT| Input Size| Bits| Total Bits|
+    +-------------------------+----+-----------+-----+-----------+
+    |ap_NS_fsm                |  20|          4|    1|          4|
+    |ap_done                  |   9|          2|    1|          2|
+    |ap_enable_reg_pp0_iter1  |   9|          2|    1|          2|
+    |ap_enable_reg_pp0_iter2  |   9|          2|    1|          2|
+    |coeff_stream5_blk_n      |   9|          2|    1|          2|
+    |i_reg_68                 |   9|          2|    8|         16|
+    |real_start               |   9|          2|    1|          2|
+    +-------------------------+----+-----------+-----+-----------+
+    |Total                    |  74|         16|   14|         30|
+    +-------------------------+----+-----------+-----+-----------+
+
+    * Register: 
+    +---------------------------------+----+----+-----+-----------+
+    |               Name              | FF | LUT| Bits| Const Bits|
+    +---------------------------------+----+----+-----+-----------+
+    |ap_CS_fsm                        |   3|   0|    3|          0|
+    |ap_done_reg                      |   1|   0|    1|          0|
+    |ap_enable_reg_pp0_iter0          |   1|   0|    1|          0|
+    |ap_enable_reg_pp0_iter1          |   1|   0|    1|          0|
+    |ap_enable_reg_pp0_iter2          |   1|   0|    1|          0|
+    |coef_reg_124                     |  32|   0|   32|          0|
+    |i_reg_68                         |   8|   0|    8|          0|
+    |icmp_ln39_reg_120                |   1|   0|    1|          0|
+    |icmp_ln39_reg_120_pp0_iter1_reg  |   1|   0|    1|          0|
+    |start_once_reg                   |   1|   0|    1|          0|
+    +---------------------------------+----+----+-----+-----------+
+    |Total                            |  50|   0|   50|          0|
+    +---------------------------------+----+----+-----+-----------+
+
+
+
+================================================================
+== Interface
+================================================================
+* Summary: 
++----------------------+-----+-----+------------+---------------+--------------+
+|       RTL Ports      | Dir | Bits|  Protocol  | Source Object |    C Type    |
++----------------------+-----+-----+------------+---------------+--------------+
+|ap_clk                |   in|    1|  ap_ctrl_hs|    ReadFromMem|  return value|
+|ap_rst                |   in|    1|  ap_ctrl_hs|    ReadFromMem|  return value|
+|ap_start              |   in|    1|  ap_ctrl_hs|    ReadFromMem|  return value|
+|start_full_n          |   in|    1|  ap_ctrl_hs|    ReadFromMem|  return value|
+|ap_done               |  out|    1|  ap_ctrl_hs|    ReadFromMem|  return value|
+|ap_continue           |   in|    1|  ap_ctrl_hs|    ReadFromMem|  return value|
+|ap_idle               |  out|    1|  ap_ctrl_hs|    ReadFromMem|  return value|
+|ap_ready              |  out|    1|  ap_ctrl_hs|    ReadFromMem|  return value|
+|start_out             |  out|    1|  ap_ctrl_hs|    ReadFromMem|  return value|
+|start_write           |  out|    1|  ap_ctrl_hs|    ReadFromMem|  return value|
+|coeffs_address0       |  out|    7|   ap_memory|         coeffs|         array|
+|coeffs_ce0            |  out|    1|   ap_memory|         coeffs|         array|
+|coeffs_q0             |   in|   32|   ap_memory|         coeffs|         array|
+|coeff_stream5_din     |  out|   32|     ap_fifo|  coeff_stream5|       pointer|
+|coeff_stream5_full_n  |   in|    1|     ap_fifo|  coeff_stream5|       pointer|
+|coeff_stream5_write   |  out|    1|     ap_fifo|  coeff_stream5|       pointer|
++----------------------+-----+-----+------------+---------------+--------------+
+

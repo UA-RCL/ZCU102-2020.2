@@ -1,0 +1,149 @@
+
+
+================================================================
+== Vitis HLS Report for 'HLS_accel'
+================================================================
+* Date:           Thu Sep  7 17:09:48 2023
+
+* Version:        2020.2 (Build 3064766 on Wed Nov 18 09:12:47 MST 2020)
+* Project:        mmult
+* Solution:       solution1 (Vivado IP Flow Target)
+* Product family: zynquplus
+* Target device:  xczu9eg-ffvb1156-2-e
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing: 
+    * Summary: 
+    +--------+---------+----------+------------+
+    |  Clock |  Target | Estimated| Uncertainty|
+    +--------+---------+----------+------------+
+    |ap_clk  |  3.33 ns|  2.262 ns|     1.00 ns|
+    +--------+---------+----------+------------+
+
++ Latency: 
+    * Summary: 
+    +---------+---------+-----------+-----------+------+------+---------+
+    |  Latency (cycles) |   Latency (absolute)  |   Interval  | Pipeline|
+    |   min   |   max   |    min    |    max    |  min |  max |   Type  |
+    +---------+---------+-----------+-----------+------+------+---------+
+    |     3917|     3917|  13.044 us|  13.044 us|  3918|  3918|     none|
+    +---------+---------+-----------+-----------+------+------+---------+
+
+    + Detail: 
+        * Instance: 
+        +----------------------------+------------------+---------+---------+-----------+-----------+------+------+---------+
+        |                            |                  |  Latency (cycles) |   Latency (absolute)  |   Interval  | Pipeline|
+        |          Instance          |      Module      |   min   |   max   |    min    |    max    |  min |  max |   Type  |
+        +----------------------------+------------------+---------+---------+-----------+-----------+------+------+---------+
+        |grp_wrapper_mmult_hw_fu_50  |wrapper_mmult_hw  |     3914|     3914|  13.034 us|  13.034 us|  3914|  3914|     none|
+        +----------------------------+------------------+---------+---------+-----------+-----------+------+------+---------+
+
+        * Loop: 
+        N/A
+
+
+
+================================================================
+== Utilization Estimates
+================================================================
+* Summary: 
++-----------------+---------+------+--------+--------+-----+
+|       Name      | BRAM_18K|  DSP |   FF   |   LUT  | URAM|
++-----------------+---------+------+--------+--------+-----+
+|DSP              |        -|     -|       -|       -|    -|
+|Expression       |        -|     -|       0|       2|    -|
+|FIFO             |        -|     -|       -|       -|    -|
+|Instance         |        5|    10|    3331|    2770|    -|
+|Memory           |        -|     -|       -|       -|    -|
+|Multiplexer      |        -|     -|       -|      35|    -|
+|Register         |        -|     -|       5|       -|    -|
++-----------------+---------+------+--------+--------+-----+
+|Total            |        5|    10|    3336|    2807|    0|
++-----------------+---------+------+--------+--------+-----+
+|Available        |     1824|  2520|  548160|  274080|    0|
++-----------------+---------+------+--------+--------+-----+
+|Utilization (%)  |       ~0|    ~0|      ~0|       1|    0|
++-----------------+---------+------+--------+--------+-----+
+
++ Detail: 
+    * Instance: 
+    +----------------------------+------------------+---------+----+------+------+-----+
+    |          Instance          |      Module      | BRAM_18K| DSP|  FF  |  LUT | URAM|
+    +----------------------------+------------------+---------+----+------+------+-----+
+    |grp_wrapper_mmult_hw_fu_50  |wrapper_mmult_hw  |        5|  10|  3331|  2770|    0|
+    +----------------------------+------------------+---------+----+------+------+-----+
+    |Total                       |                  |        5|  10|  3331|  2770|    0|
+    +----------------------------+------------------+---------+----+------+------+-----+
+
+    * DSP: 
+    N/A
+
+    * Memory: 
+    N/A
+
+    * FIFO: 
+    N/A
+
+    * Expression: 
+    +-------------------------------------------------+----------+----+---+----+------------+------------+
+    |                  Variable Name                  | Operation| DSP| FF| LUT| Bitwidth P0| Bitwidth P1|
+    +-------------------------------------------------+----------+----+---+----+------------+------------+
+    |grp_wrapper_mmult_hw_fu_50_OUTPUT_STREAM_TREADY  |       and|   0|  0|   2|           1|           1|
+    +-------------------------------------------------+----------+----+---+----+------------+------------+
+    |Total                                            |          |   0|  0|   2|           1|           1|
+    +-------------------------------------------------+----------+----+---+----+------------+------------+
+
+    * Multiplexer: 
+    +----------------------------------+----+-----------+-----+-----------+
+    |               Name               | LUT| Input Size| Bits| Total Bits|
+    +----------------------------------+----+-----------+-----+-----------+
+    |INPUT_STREAM_TREADY_int_regslice  |   9|          2|    1|          2|
+    |ap_NS_fsm                         |  26|          5|    1|          5|
+    +----------------------------------+----+-----------+-----+-----------+
+    |Total                             |  35|          7|    2|          7|
+    +----------------------------------+----+-----------+-----+-----------+
+
+    * Register: 
+    +-----------------------------------------+---+----+-----+-----------+
+    |                   Name                  | FF| LUT| Bits| Const Bits|
+    +-----------------------------------------+---+----+-----+-----------+
+    |ap_CS_fsm                                |  4|   0|    4|          0|
+    |grp_wrapper_mmult_hw_fu_50_ap_start_reg  |  1|   0|    1|          0|
+    +-----------------------------------------+---+----+-----+-----------+
+    |Total                                    |  5|   0|    5|          0|
+    +-----------------------------------------+---+----+-----+-----------+
+
+
+
+================================================================
+== Interface
+================================================================
+* Summary: 
++----------------------+-----+-----+--------------+------------------------+--------------+
+|       RTL Ports      | Dir | Bits|   Protocol   |      Source Object     |    C Type    |
++----------------------+-----+-----+--------------+------------------------+--------------+
+|ap_clk                |   in|    1|  ap_ctrl_none|               HLS_accel|  return value|
+|ap_rst_n              |   in|    1|  ap_ctrl_none|               HLS_accel|  return value|
+|INPUT_STREAM_TDATA    |   in|   32|          axis|   INPUT_STREAM_V_data_V|       pointer|
+|INPUT_STREAM_TVALID   |   in|    1|          axis|   INPUT_STREAM_V_dest_V|       pointer|
+|INPUT_STREAM_TREADY   |  out|    1|          axis|   INPUT_STREAM_V_dest_V|       pointer|
+|INPUT_STREAM_TDEST    |   in|    1|          axis|   INPUT_STREAM_V_dest_V|       pointer|
+|INPUT_STREAM_TKEEP    |   in|    4|          axis|   INPUT_STREAM_V_keep_V|       pointer|
+|INPUT_STREAM_TSTRB    |   in|    4|          axis|   INPUT_STREAM_V_strb_V|       pointer|
+|INPUT_STREAM_TUSER    |   in|    1|          axis|   INPUT_STREAM_V_user_V|       pointer|
+|INPUT_STREAM_TLAST    |   in|    1|          axis|   INPUT_STREAM_V_last_V|       pointer|
+|INPUT_STREAM_TID      |   in|    1|          axis|     INPUT_STREAM_V_id_V|       pointer|
+|OUTPUT_STREAM_TDATA   |  out|   32|          axis|  OUTPUT_STREAM_V_data_V|       pointer|
+|OUTPUT_STREAM_TVALID  |  out|    1|          axis|  OUTPUT_STREAM_V_dest_V|       pointer|
+|OUTPUT_STREAM_TREADY  |   in|    1|          axis|  OUTPUT_STREAM_V_dest_V|       pointer|
+|OUTPUT_STREAM_TDEST   |  out|    1|          axis|  OUTPUT_STREAM_V_dest_V|       pointer|
+|OUTPUT_STREAM_TKEEP   |  out|    4|          axis|  OUTPUT_STREAM_V_keep_V|       pointer|
+|OUTPUT_STREAM_TSTRB   |  out|    4|          axis|  OUTPUT_STREAM_V_strb_V|       pointer|
+|OUTPUT_STREAM_TUSER   |  out|    1|          axis|  OUTPUT_STREAM_V_user_V|       pointer|
+|OUTPUT_STREAM_TLAST   |  out|    1|          axis|  OUTPUT_STREAM_V_last_V|       pointer|
+|OUTPUT_STREAM_TID     |  out|    1|          axis|    OUTPUT_STREAM_V_id_V|       pointer|
++----------------------+-----+-----+--------------+------------------------+--------------+
+

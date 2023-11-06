@@ -1,0 +1,53 @@
+<profile>
+
+<section name = "Vitis HLS Report for 'wrapper_zip_hw'" level="0">
+<item name = "Date">Thu Sep  7 16:47:37 2023
+</item>
+<item name = "Version">2020.2 (Build 3064766 on Wed Nov 18 09:12:47 MST 2020)</item>
+<item name = "Project">ZIP_prj</item>
+<item name = "Solution">zip (Vivado IP Flow Target)</item>
+<item name = "Product family">zynquplus</item>
+<item name = "Target device">xczu9eg-ffvb1156-2-e</item>
+</section>
+
+<section name = "Performance Estimates" level="0">
+<item name = "Timing">
+<section name = "" level="1">
+<item name = "Summary"><table name="" hasTotal="0">
+<keys size="4">Clock, Target, Estimated, Uncertainty</keys>
+<column name="ap_clk">3.33 ns, 2.416 ns, 0.90 ns</column>
+</table>
+</item>
+</section>
+</item>
+<item name = "Latency">
+<section name = "" level="1">
+<item name = "Summary"><table name="" hasTotal="0">
+<keys size="8">, min, max, min, max, min, max, Type</keys>
+<column name="">2, 16442, 6.666 ns, 54.801 us, 2, 16442, none</column>
+</table>
+</item>
+<item name = "Detail">
+<section name = "" level="1">
+<item name = "Instance"><table name="" hasTotal="0">
+<keys size="9">Instance, Module, min, max, min, max, min, max, Type</keys>
+</table>
+</item>
+<item name = "Loop"><table name="" hasTotal="0">
+<keys size="8">Loop Name, min, max, Latency, achieved, target, Count, Pipelined</keys>
+<column name="- VITIS_LOOP_22_1">2, 4096, 1, 1, 1, 2 ~ 4096, yes</column>
+<column name="- VITIS_LOOP_29_2">2, 4096, 1, 1, 1, 2 ~ 4096, yes</column>
+<column name="- zip_add_l">14, 4108, 14, 1, 1, 2 ~ 4096, yes</column>
+<column name="- zip_sub_l">14, 4108, 14, 1, 1, 2 ~ 4096, yes</column>
+<column name="- zip_mult_l">21, 4115, 21, 1, 1, 2 ~ 4096, yes</column>
+<column name="- zip_div_l">51, 4145, 51, 1, 1, 2 ~ 4096, yes</column>
+<column name="- zip_add_l">14, 4108, 14, 1, 1, 2 ~ 4096, yes</column>
+<column name="- VITIS_LOOP_56_3">2, 4096, 2, 1, 1, 2 ~ 4096, yes</column>
+</table>
+</item>
+</section>
+</item>
+</section>
+</item>
+</section>
+</profile>

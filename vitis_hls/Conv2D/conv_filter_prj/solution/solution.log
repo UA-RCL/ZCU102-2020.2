@@ -1,0 +1,300 @@
+==============================================================
+Vitis HLS - High-Level Synthesis from C, C++ and OpenCL v2020.2 (64-bit)
+Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
+==============================================================
+INFO: [HLS 200-1505] Using default flow_target 'vivado'
+INFO: [HLS 200-1510] Running: set_part xczu9eg-ffvb1156-2-e 
+INFO: [HLS 200-10] Setting target device to 'xczu9eg-ffvb1156-2-e'
+INFO: [HLS 200-1510] Running: create_clock -period 3.33333333 -name default 
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 3.333ns.
+INFO: [HLS 200-1510] Running: set_clock_uncertainty 1 
+INFO: [SYN 201-201] Setting up clock 'default' with an uncertainty of 1ns.
+INFO: [HLS 200-1510] Running: csim_design 
+INFO: [SIM 211-2] *************** CSIM start ***************
+INFO: [SIM 211-4] CSIM will launch GCC as the compiler.
+INFO: [SIM 211-1] CSim done with 0 errors.
+INFO: [SIM 211-3] *************** CSIM finish ***************
+INFO: [HLS 200-111] Finished Command csim_design CPU user time: 1.62 seconds. CPU system time: 0.51 seconds. Elapsed time: 6.66 seconds; current allocated memory: 206.069 MB.
+INFO: [HLS 200-1510] Running: csynth_design 
+INFO: [HLS 200-111] Finished File checks and directory preparation: CPU user time: 0.01 seconds. CPU system time: 0 seconds. Elapsed time: 0 seconds; current allocated memory: 206.251 MB.
+INFO: [HLS 200-10] Analyzing design file './filter2d_hw.cpp' ... 
+WARNING: [HLS 207-5301] unused parameter 'width': ./filter2d_hw.cpp:23:24
+WARNING: [HLS 207-5301] unused parameter 'factor': ./filter2d_hw.cpp:141:15
+INFO: [HLS 200-111] Finished Source Code Analysis and Preprocessing: CPU user time: 1.55 seconds. CPU system time: 0.39 seconds. Elapsed time: 6.68 seconds; current allocated memory: 207.990 MB.
+INFO: [HLS 200-777] Using interface defaults for 'Vivado' flow target.
+INFO: [HLS 214-131] Inlining function 'hls::stream<float, 0>::stream()' into 'hls::stream<float, 2>::stream()' (/opt/CoE/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/hls_stream_39.h:195:43)
+INFO: [HLS 214-131] Inlining function 'hls::stream<window, 0>::stream()' into 'hls::stream<window, 3>::stream()' (/opt/CoE/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/hls_stream_39.h:195:43)
+INFO: [HLS 214-131] Inlining function 'hls::stream<float, 0>::write(float const&)' into 'ReadFromMem(unsigned short, unsigned short, unsigned short, float const*, hls::stream<float, 0>&)' (./filter2d_hw.cpp:39:39)
+INFO: [HLS 214-131] Inlining function 'hls::stream<int, 0>::read(int&)' into 'hls::stream<int, 0>::read()' (/opt/CoE/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/hls_stream_39.h:156:9)
+INFO: [HLS 214-131] Inlining function 'hls::stream<int, 0>::read()' into 'Window2D(unsigned short, unsigned short, hls::stream<int, 0>&, hls::stream<window, 0>&)' (./filter2d_hw.cpp:107:50)
+INFO: [HLS 214-131] Inlining function 'hls::stream<window, 0>::write(window const&)' into 'Window2D(unsigned short, unsigned short, hls::stream<int, 0>&, hls::stream<window, 0>&)' (./filter2d_hw.cpp:132:27)
+INFO: [HLS 214-131] Inlining function 'hls::stream<float, 0>::read(float&)' into 'hls::stream<float, 0>::read()' (/opt/CoE/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/hls_stream_39.h:156:9)
+INFO: [HLS 214-131] Inlining function 'hls::stream<window, 0>::read(window&)' into 'hls::stream<window, 0>::read()' (/opt/CoE/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/hls_stream_39.h:156:9)
+INFO: [HLS 214-131] Inlining function 'hls::axis<ap_uint<32>, 0ul, 0ul, 0ul>::get_user_ptr()' into 'hls::stream<hls::axis<ap_uint<32>, 0ul, 0ul, 0ul>, 0>::write(hls::axis<ap_uint<32>, 0ul, 0ul, 0ul> const&)' (/opt/CoE/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_axi_sdata.h:304:51)
+INFO: [HLS 214-131] Inlining function 'hls::axis<ap_uint<32>, 0ul, 0ul, 0ul>::get_dest_ptr()' into 'hls::stream<hls::axis<ap_uint<32>, 0ul, 0ul, 0ul>, 0>::write(hls::axis<ap_uint<32>, 0ul, 0ul, 0ul> const&)' (/opt/CoE/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_axi_sdata.h:307:26)
+INFO: [HLS 214-131] Inlining function 'hls::axis<ap_uint<32>, 0ul, 0ul, 0ul>::get_id_ptr()' into 'hls::stream<hls::axis<ap_uint<32>, 0ul, 0ul, 0ul>, 0>::write(hls::axis<ap_uint<32>, 0ul, 0ul, 0ul> const&)' (/opt/CoE/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_axi_sdata.h:306:68)
+INFO: [HLS 214-131] Inlining function 'hls::axis<ap_uint<32>, 0ul, 0ul, 0ul>::get_user_ptr()' into 'hls::stream<hls::axis<ap_uint<32>, 0ul, 0ul, 0ul>, 0>::write(hls::axis<ap_uint<32>, 0ul, 0ul, 0ul> const&)' (/opt/CoE/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_axi_sdata.h:306:37)
+INFO: [HLS 214-131] Inlining function 'hls::axis<ap_uint<32>, 0ul, 0ul, 0ul>::get_dest_ptr()' into 'hls::stream<hls::axis<ap_uint<32>, 0ul, 0ul, 0ul>, 0>::write(hls::axis<ap_uint<32>, 0ul, 0ul, 0ul> const&)' (/opt/CoE/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_axi_sdata.h:305:40)
+INFO: [HLS 214-131] Inlining function 'hls::axis<ap_uint<32>, 0ul, 0ul, 0ul>::get_id_ptr()' into 'hls::stream<hls::axis<ap_uint<32>, 0ul, 0ul, 0ul>, 0>::write(hls::axis<ap_uint<32>, 0ul, 0ul, 0ul> const&)' (/opt/CoE/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/ap_axi_sdata.h:305:24)
+INFO: [HLS 214-131] Inlining function 'hls::stream<float, 0>::read()' into 'Filter2D(unsigned short, unsigned short, float, short, hls::stream<float, 0>&, hls::stream<window, 0>&, hls::stream<hls::axis<ap_uint<32>, 0ul, 0ul, 0ul>, 0>&)' (./filter2d_hw.cpp:158:30)
+INFO: [HLS 214-131] Inlining function 'hls::stream<hls::axis<ap_uint<32>, 0ul, 0ul, 0ul>, 0>::write(hls::axis<ap_uint<32>, 0ul, 0ul, 0ul> const&)' into 'Filter2D(unsigned short, unsigned short, float, short, hls::stream<float, 0>&, hls::stream<window, 0>&, hls::stream<hls::axis<ap_uint<32>, 0ul, 0ul, 0ul>, 0>&)' (./filter2d_hw.cpp:199:26)
+INFO: [HLS 214-131] Inlining function 'hls::stream<window, 0>::read()' into 'Filter2D(unsigned short, unsigned short, float, short, hls::stream<float, 0>&, hls::stream<window, 0>&, hls::stream<hls::axis<ap_uint<32>, 0ul, 0ul, 0ul>, 0>&)' (./filter2d_hw.cpp:169:27)
+INFO: [HLS 214-131] Inlining function 'hls::stream<float, 2>::stream()' into 'Filter2DKernel' (./filter2d_hw.cpp:233:23)
+INFO: [HLS 214-131] Inlining function 'hls::stream<window, 3>::stream()' into 'Filter2DKernel' (./filter2d_hw.cpp:235:27)
+INFO: [HLS 214-178] Inlining function 'fp_struct<float>::fp_struct(float)' into 'int generic_cast_IEEE754<int, (ap_q_mode)6, float>(float, bool, hls::enable_if<std::numeric_limits<int>::is_signed, bool>::type)' (/wrk/ci/prod/2020.2/rdi_builds/continuous/2020_11_18_3064766/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_case_IEEE754.h:12:0)
+INFO: [HLS 214-178] Inlining function 'fp_struct<float>::mantissa() const' into 'int generic_cast_IEEE754<int, (ap_q_mode)6, float>(float, bool, hls::enable_if<std::numeric_limits<int>::is_signed, bool>::type)' (/wrk/ci/prod/2020.2/rdi_builds/continuous/2020_11_18_3064766/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_case_IEEE754.h:12:0)
+INFO: [HLS 214-178] Inlining function 'fp_struct<float>::expv() const' into 'int generic_cast_IEEE754<int, (ap_q_mode)6, float>(float, bool, hls::enable_if<std::numeric_limits<int>::is_signed, bool>::type)' (/wrk/ci/prod/2020.2/rdi_builds/continuous/2020_11_18_3064766/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_case_IEEE754.h:12:0)
+INFO: [HLS 214-178] Inlining function 'fp_struct<float>::__signbit() const' into 'int generic_cast_IEEE754<int, (ap_q_mode)6, float>(float, bool, hls::enable_if<std::numeric_limits<int>::is_signed, bool>::type)' (/wrk/ci/prod/2020.2/rdi_builds/continuous/2020_11_18_3064766/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_case_IEEE754.h:12:0)
+INFO: [HLS 214-178] Inlining function 'int generic_cast_IEEE754<int, (ap_q_mode)6, float>(float, bool, hls::enable_if<std::numeric_limits<int>::is_signed, bool>::type)' into 'int generic_cast_IEEE754<int, float>(float, bool)' (/wrk/ci/prod/2020.2/rdi_builds/continuous/2020_11_18_3064766/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_case_IEEE754.h:116:0)
+INFO: [HLS 214-178] Inlining function 'int generic_cast_IEEE754<int, float>(float, bool)' into '__hls_fptosi_float_i32' (/wrk/ci/prod/2020.2/rdi_builds/continuous/2020_11_18_3064766/src/shared/hls/clib/hlsmath/src/lib_floatconversion.cpp:51:0)
+INFO: [HLS 214-131] Inlining function '_llvm.fpga.pack.none.i3872.s_struct.windows' into 'Window2D(unsigned short, unsigned short, hls::stream<int, 0>&, hls::stream<window, 0>&) (.1)' (/opt/CoE/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/hls_stream_39.h:174:9)
+INFO: [HLS 200-111] Finished Compiling Optimization and Transform: CPU user time: 3.03 seconds. CPU system time: 0.32 seconds. Elapsed time: 6.84 seconds; current allocated memory: 213.169 MB.
+INFO: [HLS 200-111] Finished Checking Pragmas: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0 seconds; current allocated memory: 213.170 MB.
+INFO: [HLS 200-10] Starting code transformations ...
+INFO: [HLS 200-111] Finished Standard Transforms: CPU user time: 0.14 seconds. CPU system time: 0.02 seconds. Elapsed time: 0.82 seconds; current allocated memory: 237.991 MB.
+INFO: [HLS 200-10] Checking synthesizability ...
+INFO: [XFORM 203-602] Inlining function '__hls_fptosi_float_i32' into 'Filter2D' (./filter2d_hw.cpp:186) automatically.
+INFO: [HLS 200-111] Finished Checking Synthesizability: CPU user time: 0.39 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.4 seconds; current allocated memory: 273.587 MB.
+INFO: [XFORM 203-510] Pipelining loop 'read_coefs' (./filter2d_hw.cpp:37) in function 'ReadFromMem' automatically.
+INFO: [XFORM 203-502] Unrolling all sub-loops inside loop 'update_window' (./filter2d_hw.cpp:92) in function 'Window2D' for pipelining.
+INFO: [XFORM 203-502] Unrolling all sub-loops inside loop 'VITIS_LOOP_165_2' (./filter2d_hw.cpp:165) in function 'Filter2D' for pipelining.
+INFO: [HLS 200-489] Unrolling loop 'VITIS_LOOP_110_1' (./filter2d_hw.cpp:110) in function 'Window2D' completely with a factor of 11.
+INFO: [HLS 200-489] Unrolling loop 'VITIS_LOOP_111_2' (./filter2d_hw.cpp:111) in function 'Window2D' completely with a factor of 10.
+INFO: [HLS 200-489] Unrolling loop 'VITIS_LOOP_118_3' (./filter2d_hw.cpp:118) in function 'Window2D' completely with a factor of 9.
+INFO: [HLS 200-489] Unrolling loop 'VITIS_LOOP_173_3' (./filter2d_hw.cpp:172) in function 'Filter2D' completely with a factor of 11.
+INFO: [HLS 200-489] Unrolling loop 'VITIS_LOOP_175_4' (./filter2d_hw.cpp:172) in function 'Filter2D' completely with a factor of 11.
+INFO: [XFORM 203-102] Partitioning array 'Window.pix' (./filter2d_hw.cpp:90) in dimension 1 automatically.
+INFO: [XFORM 203-102] Partitioning array 'Window.pix.0' (./filter2d_hw.cpp:90) automatically.
+INFO: [XFORM 203-102] Partitioning array 'Window.pix.1' (./filter2d_hw.cpp:90) automatically.
+INFO: [XFORM 203-102] Partitioning array 'Window.pix.2' (./filter2d_hw.cpp:90) automatically.
+INFO: [XFORM 203-102] Partitioning array 'Window.pix.3' (./filter2d_hw.cpp:90) automatically.
+INFO: [XFORM 203-102] Partitioning array 'Window.pix.4' (./filter2d_hw.cpp:90) automatically.
+INFO: [XFORM 203-102] Partitioning array 'Window.pix.5' (./filter2d_hw.cpp:90) automatically.
+INFO: [XFORM 203-102] Partitioning array 'Window.pix.6' (./filter2d_hw.cpp:90) automatically.
+INFO: [XFORM 203-102] Partitioning array 'Window.pix.7' (./filter2d_hw.cpp:90) automatically.
+INFO: [XFORM 203-102] Partitioning array 'Window.pix.8' (./filter2d_hw.cpp:90) automatically.
+INFO: [XFORM 203-102] Partitioning array 'Window.pix.9' (./filter2d_hw.cpp:90) automatically.
+INFO: [XFORM 203-102] Partitioning array 'Window.pix.10' (./filter2d_hw.cpp:90) automatically.
+INFO: [XFORM 203-102] Partitioning array 'tmp.pix' (/opt/CoE/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/hls_stream_39.h:155) in dimension 1 automatically.
+INFO: [XFORM 203-102] Partitioning array 'tmp.pix.0' (/opt/CoE/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/hls_stream_39.h:155) automatically.
+INFO: [XFORM 203-102] Partitioning array 'tmp.pix.1' (/opt/CoE/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/hls_stream_39.h:155) automatically.
+INFO: [XFORM 203-102] Partitioning array 'tmp.pix.2' (/opt/CoE/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/hls_stream_39.h:155) automatically.
+INFO: [XFORM 203-102] Partitioning array 'tmp.pix.3' (/opt/CoE/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/hls_stream_39.h:155) automatically.
+INFO: [XFORM 203-102] Partitioning array 'tmp.pix.4' (/opt/CoE/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/hls_stream_39.h:155) automatically.
+INFO: [XFORM 203-102] Partitioning array 'tmp.pix.5' (/opt/CoE/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/hls_stream_39.h:155) automatically.
+INFO: [XFORM 203-102] Partitioning array 'tmp.pix.6' (/opt/CoE/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/hls_stream_39.h:155) automatically.
+INFO: [XFORM 203-102] Partitioning array 'tmp.pix.7' (/opt/CoE/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/hls_stream_39.h:155) automatically.
+INFO: [XFORM 203-102] Partitioning array 'tmp.pix.8' (/opt/CoE/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/hls_stream_39.h:155) automatically.
+INFO: [XFORM 203-102] Partitioning array 'tmp.pix.9' (/opt/CoE/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/hls_stream_39.h:155) automatically.
+INFO: [XFORM 203-102] Partitioning array 'tmp.pix.10' (/opt/CoE/Xilinx/Vitis_HLS/2020.2/common/technology/autopilot/hls_stream_39.h:155) automatically.
+INFO: [XFORM 203-101] Partitioning array 'LineBuffer' (./filter2d_hw.cpp:84) in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'coeffs' (./filter2d_hw.cpp:151) in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'coeffs' (./filter2d_hw.cpp:151) in dimension 2 completely.
+WARNING: [ANALYSIS 214-31] The program may have out of bound access of array variable 'coeffs' in function 'ReadFromMem' (./filter2d_hw.cpp:38:22).
+WARNING: [HLS 200-786] Detected dataflow-on-top in function  'Filter2DKernel' (./filter2d_hw.cpp:209)  with default interface mode 'ap_ctrl_hs'. Overlapped execution of successive kernel calls will not happen unless interface mode 'ap_ctrl_chain' is used (or 'ap_ctrl_none' for a purely data-driven design).
+INFO: [XFORM 203-712] Applying dataflow to function 'Filter2DKernel' (./filter2d_hw.cpp:209), detected/extracted 4 process function(s): 
+	 'Filter2DKernel.entry4'
+	 'ReadFromMem'
+	 'Window2D'
+	 'Filter2D'.
+INFO: [XFORM 203-11] Balancing expressions in function 'Filter2D' (./filter2d_hw.cpp:0:15)...121 expression(s) balanced.
+INFO: [HLS 200-111] Finished Loop, function and other optimizations: CPU user time: 1.12 seconds. CPU system time: 0.02 seconds. Elapsed time: 1.16 seconds; current allocated memory: 332.888 MB.
+INFO: [XFORM 203-541] Flattening a loop nest 'load_coefs' (./filter2d_hw.cpp:155:23) in function 'Filter2D'.
+INFO: [XFORM 203-541] Flattening a loop nest 'apply_filter' (./filter2d_hw.cpp:163:28) in function 'Filter2D'.
+WARNING: [ANALYSIS 214-52] Found false inter dependency for variable 'LineBuffer[0]' (./filter2d_hw.cpp:84).
+WARNING: [ANALYSIS 214-52] Found false inter dependency for variable 'LineBuffer[7]' (./filter2d_hw.cpp:84).
+WARNING: [ANALYSIS 214-52] Found false inter dependency for variable 'LineBuffer[6]' (./filter2d_hw.cpp:84).
+WARNING: [ANALYSIS 214-52] Found false inter dependency for variable 'LineBuffer[5]' (./filter2d_hw.cpp:84).
+WARNING: [ANALYSIS 214-52] Found false inter dependency for variable 'LineBuffer[4]' (./filter2d_hw.cpp:84).
+WARNING: [ANALYSIS 214-52] Found false inter dependency for variable 'LineBuffer[3]' (./filter2d_hw.cpp:84).
+WARNING: [ANALYSIS 214-52] Found false inter dependency for variable 'LineBuffer[2]' (./filter2d_hw.cpp:84).
+WARNING: [ANALYSIS 214-52] Found false inter dependency for variable 'LineBuffer[1]' (./filter2d_hw.cpp:84).
+WARNING: [ANALYSIS 214-52] Found false inter dependency for variable 'LineBuffer[8]' (./filter2d_hw.cpp:84).
+WARNING: [ANALYSIS 214-52] Found false inter dependency for variable 'LineBuffer[9]' (./filter2d_hw.cpp:84).
+WARNING: [ANALYSIS 214-52] Found false intra dependency for variable 'LineBuffer[0]' (./filter2d_hw.cpp:84).
+WARNING: [ANALYSIS 214-52] Found false intra dependency for variable 'LineBuffer[7]' (./filter2d_hw.cpp:84).
+WARNING: [ANALYSIS 214-52] Found false intra dependency for variable 'LineBuffer[6]' (./filter2d_hw.cpp:84).
+WARNING: [ANALYSIS 214-52] Found false intra dependency for variable 'LineBuffer[5]' (./filter2d_hw.cpp:84).
+WARNING: [ANALYSIS 214-52] Found false intra dependency for variable 'LineBuffer[4]' (./filter2d_hw.cpp:84).
+WARNING: [ANALYSIS 214-52] Found false intra dependency for variable 'LineBuffer[3]' (./filter2d_hw.cpp:84).
+WARNING: [ANALYSIS 214-52] Found false intra dependency for variable 'LineBuffer[2]' (./filter2d_hw.cpp:84).
+WARNING: [ANALYSIS 214-52] Found false intra dependency for variable 'LineBuffer[1]' (./filter2d_hw.cpp:84).
+WARNING: [ANALYSIS 214-52] Found false intra dependency for variable 'LineBuffer[8]' (./filter2d_hw.cpp:84).
+WARNING: [ANALYSIS 214-52] Found false intra dependency for variable 'LineBuffer[9]' (./filter2d_hw.cpp:84).
+INFO: [HLS 200-472] Inferring partial write operation for 'LineBuffer[0]' (./filter2d_hw.cpp:119:36)
+INFO: [HLS 200-472] Inferring partial write operation for 'LineBuffer[9]' (./filter2d_hw.cpp:121:36)
+WARNING: [HLS 200-1614] Cosimulation may deadlock if process Window2D has a streamed top-level array input and has predecessor processes. If a deadlock occurs, please consider converting the streamed array into an hls::stream or using '::common::get_param hls.config_cosim.top_streamed_array true' in the TCL script.
+INFO: [HLS 200-111] Finished Architecture Synthesis: CPU user time: 0.73 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.77 seconds; current allocated memory: 411.626 MB.
+INFO: [HLS 200-10] Starting hardware synthesis ...
+INFO: [HLS 200-10] Synthesizing 'Filter2DKernel' ...
+WARNING: [SYN 201-103] Legalizing function name 'Filter2DKernel.entry3' to 'Filter2DKernel_entry3'.
+WARNING: [SYN 201-103] Legalizing function name 'Filter2DKernel.entry4' to 'Filter2DKernel_entry4'.
+WARNING: [SYN 201-103] Legalizing function name '__hls_fptosi_float_i32' to 'p_hls_fptosi_float_i32'.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'Filter2DKernel_entry3' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.04 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.15 seconds; current allocated memory: 412.535 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.02 seconds. CPU system time: 0 seconds. Elapsed time: 0.04 seconds; current allocated memory: 412.618 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'Filter2DKernel_entry4' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.01 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.01 seconds; current allocated memory: 412.716 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.01 seconds; current allocated memory: 412.867 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'ReadFromMem' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'read_coefs'.
+INFO: [HLS 200-1470] Pipelining result : Target II = 1, Final II = 1, Depth = 3, loop 'read_coefs'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.02 seconds. CPU system time: 0 seconds. Elapsed time: 0.02 seconds; current allocated memory: 412.961 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.02 seconds. CPU system time: 0 seconds. Elapsed time: 0.01 seconds; current allocated memory: 413.077 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'Window2D' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [HLS 200-486] Changing DSP48 latency (root=num_pixels) to 3 in order to utilize available DSP registers.
+INFO: [SCHED 204-61] Pipelining loop 'update_window'.
+INFO: [HLS 200-1470] Pipelining result : Target II = 1, Final II = 1, Depth = 3, loop 'update_window'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.07 seconds. CPU system time: 0 seconds. Elapsed time: 0.08 seconds; current allocated memory: 414.168 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.05 seconds. CPU system time: 0 seconds. Elapsed time: 0.05 seconds; current allocated memory: 415.811 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'p_hls_fptosi_float_i32' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining function '__hls_fptosi_float_i32'.
+INFO: [HLS 200-1470] Pipelining result : Target II = 1, Final II = 1, Depth = 3, function '__hls_fptosi_float_i32'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.05 seconds. CPU system time: 0 seconds. Elapsed time: 0.05 seconds; current allocated memory: 415.925 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.02 seconds. CPU system time: 0 seconds. Elapsed time: 0.02 seconds; current allocated memory: 416.049 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'Filter2D' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [HLS 200-486] Changing DSP48 latency (root=bound4) to 3 in order to utilize available DSP registers.
+INFO: [SCHED 204-61] Pipelining loop 'load_coefs_VITIS_LOOP_156_1'.
+INFO: [HLS 200-1470] Pipelining result : Target II = 1, Final II = 1, Depth = 2, loop 'load_coefs_VITIS_LOOP_156_1'
+INFO: [SCHED 204-61] Pipelining loop 'apply_filter_VITIS_LOOP_165_2'.
+INFO: [HLS 200-1470] Pipelining result : Target II = 1, Final II = 1, Depth = 25, loop 'apply_filter_VITIS_LOOP_165_2'
+WARNING: [HLS 200-871] Estimated clock period (3.239ns) exceeds the target (target clock period: 3.333ns, clock uncertainty: 1ns, effective delay budget: 2.333ns).
+WARNING: [HLS 200-1016] The critical path in module 'Filter2D' consists of the following:	'sitofp' operation ('tmp_2_i', ./filter2d_hw.cpp:186->./filter2d_hw.cpp:212) [895]  (3.24 ns)
+
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.83 seconds. CPU system time: 0 seconds. Elapsed time: 0.84 seconds; current allocated memory: 422.732 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 1.55 seconds. CPU system time: 0 seconds. Elapsed time: 1.55 seconds; current allocated memory: 433.944 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'Filter2DKernel' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+WARNING: [HLS 200-1018] Consider increasing the depth of FIFO coeff_stream (from ReadFromMem_U0 to Filter2D_U0) to 4 to improve performance and/or avoid deadlocks.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 2.49 seconds. CPU system time: 0.01 seconds. Elapsed time: 2.5 seconds; current allocated memory: 434.136 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 1.11 seconds. CPU system time: 0 seconds. Elapsed time: 1.11 seconds; current allocated memory: 434.525 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'Filter2DKernel_entry3' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-100] Finished creating RTL model for 'Filter2DKernel_entry3'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 1.61 seconds. CPU system time: 0 seconds. Elapsed time: 1.62 seconds; current allocated memory: 434.645 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'Filter2DKernel_entry4' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-100] Finished creating RTL model for 'Filter2DKernel_entry4'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.01 seconds. CPU system time: 0 seconds. Elapsed time: 0.03 seconds; current allocated memory: 435.032 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'ReadFromMem' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-100] Finished creating RTL model for 'ReadFromMem'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.02 seconds. CPU system time: 0 seconds. Elapsed time: 0.02 seconds; current allocated memory: 435.549 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'Window2D' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-100] Generating core module 'mul_mul_16ns_16ns_32_4_1': 1 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'Window2D'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.05 seconds. CPU system time: 0 seconds. Elapsed time: 0.06 seconds; current allocated memory: 438.524 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'p_hls_fptosi_float_i32' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-100] Finished creating RTL model for 'p_hls_fptosi_float_i32'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.13 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.15 seconds; current allocated memory: 444.480 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'Filter2D' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-100] Generating core module 'fmul_32ns_32ns_32_8_max_dsp_1': 121 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'mul_mul_11ns_11ns_22_4_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'sitofp_32ns_32_7_no_dsp_1': 121 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'Filter2D'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.53 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.54 seconds; current allocated memory: 467.928 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'Filter2DKernel' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+WARNING: [RTGEN 206-101] Design contains AXI ports. Reset is fixed to synchronous and active low.
+INFO: [RTGEN 206-500] Setting interface mode on port 'Filter2DKernel/coeffs' to 's_axilite & ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'Filter2DKernel/factor' to 's_axilite & ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'Filter2DKernel/bias' to 's_axilite & ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'Filter2DKernel/width' to 's_axilite & ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'Filter2DKernel/height' to 's_axilite & ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'Filter2DKernel/stride' to 's_axilite & ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'Filter2DKernel/input_stream_V' to 'axis' (register, both mode).
+INFO: [RTGEN 206-500] Setting interface mode on port 'Filter2DKernel/output_stream_V_data_V' to 'axis' (register, both mode).
+INFO: [RTGEN 206-500] Setting interface mode on port 'Filter2DKernel/output_stream_V_keep_V' to 'axis' (register, both mode).
+INFO: [RTGEN 206-500] Setting interface mode on port 'Filter2DKernel/output_stream_V_strb_V' to 'axis' (register, both mode).
+INFO: [RTGEN 206-500] Setting interface mode on port 'Filter2DKernel/output_stream_V_last_V' to 'axis' (register, both mode).
+INFO: [RTGEN 206-500] Setting interface mode on function 'Filter2DKernel' to 's_axilite & ap_ctrl_hs'.
+INFO: [RTGEN 206-100] Bundling port 'factor', 'bias', 'width', 'height', 'stride', 'coeffs' and 'return' to AXI-Lite port config.
+INFO: [RTGEN 206-100] Finished creating RTL model for 'Filter2DKernel'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 3.83 seconds. CPU system time: 0.04 seconds. Elapsed time: 3.88 seconds; current allocated memory: 496.989 MB.
+INFO: [RTMG 210-278] Implementing memory 'Filter2DKernel_Window2D_LineBuffer_0_ram (RAM)' using auto RAMs.
+INFO: [RTMG 210-285] Implementing FIFO 'bias_c1_U(Filter2DKernel_fifo_w16_d2_S)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'width_c2_U(Filter2DKernel_fifo_w16_d2_S)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'height_c3_U(Filter2DKernel_fifo_w16_d2_S)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'bias_c_U(Filter2DKernel_fifo_w16_d3_S)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'width_c_U(Filter2DKernel_fifo_w16_d2_S)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'width_c9_U(Filter2DKernel_fifo_w16_d3_S)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'height_c_U(Filter2DKernel_fifo_w16_d2_S)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'height_c10_U(Filter2DKernel_fifo_w16_d3_S)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'coeff_stream_U(Filter2DKernel_fifo_w32_d2_S)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'window_stream_U(Filter2DKernel_fifo_w3872_d3_A)' using Vivado Default RAMs.
+INFO: [RTMG 210-285] Implementing FIFO 'start_for_Filter2DKernel_entry4_U0_U(Filter2DKernel_start_for_Filter2DKernel_entry4_U0)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'start_for_Window2D_U0_U(Filter2DKernel_start_for_Window2D_U0)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'start_for_Filter2D_U0_U(Filter2DKernel_start_for_Filter2D_U0)' using Shift Registers.
+INFO: [HLS 200-111] 
