@@ -1,6 +1,6 @@
 PETALINUX_VER=2020.2
 VALIDATE_HW_CHKSUM=1
-HARDWARE_CHECKSUM=47651cf33293425a6cd713bc6026f839
+HARDWARE_CHECKSUM=29fa63ca9b71a2bead28ae1d80227bff
 YOCTO_SDK=267ec34beec0964aff190e9bebb3cc43
 RFSCONFIG_CHKSUM=e308a2ab6af10f73847baf566c2c401c
-HARDWARE_PATH=/host-fs/localhome/jmack2545/rcl/DASH-SoC/Hardware_Images/ZCU102_2020.2/vivado/proj/fft2x_mmult2x_wrapper.xsa
+HARDWARE_PATH=/home/vivado/project/vivado/proj/fft2x_mmult2x_conv2d1x_zip1x_wrapper.xsa

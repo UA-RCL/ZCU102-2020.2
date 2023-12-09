@@ -24,6 +24,13 @@
   udmabuf3: udmabuf@0x0B {
     compatible = "ikwzm,u-dma-buf";
     device-name = "udmabuf3";
+    // 8 MiB = 8388608 B = 0x800000
+    size = <0x00800000>;
+  };
+
+  udmabuf4: udmabuf@0x0F {
+    compatible = "ikwzm,u-dma-buf";
+    device-name = "udmabuf4";
     // 1 MiB = 1048576 B = 0x100000
     size = <0x00100000>;
   };
