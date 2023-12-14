@@ -21,14 +21,14 @@
     size = <0x00100000>;
   };
   
-  udmabuf3: udmabuf@0x0B {
+  udmabuf3: udmabuf@0x0C {
     compatible = "ikwzm,u-dma-buf";
     device-name = "udmabuf3";
     // 8 MiB = 8388608 B = 0x800000
     size = <0x00800000>;
   };
 
-  udmabuf4: udmabuf@0x0F {
+  udmabuf4: udmabuf@0x10 {
     compatible = "ikwzm,u-dma-buf";
     device-name = "udmabuf4";
     // 1 MiB = 1048576 B = 0x100000
@@ -48,4 +48,9 @@
 &mmult_1_dma {
   compatible = "generic-uio";
 };
-
+&conv2D_0_dma {
+  compatible = "generic-uio";
+};
+&ZIP_0_dma {
+  compatible = "generic-uio";
+};
